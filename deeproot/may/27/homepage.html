@@ -1,0 +1,17 @@
+
+<div class="home-banner">{{block class="Mageplaza\BannerSlider\Block\Widget" slider_id="1"}}</div>
+<div class="storepick-sec">{{block class="Magento\Cms\Block\Block" block_id="store-select-box"}}</div>
+<div class="category-sec">{{block class="Magento\Cms\Block\Block" block_id="category-block"}}</div>
+<!-- trending block -->
+<div class="trending-block">
+<h2 class="chead" style="text-align: center;">TRENDING</h2>
+<div class="block-note">Top view in this week</div>
+{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" title="trending" show_pager="0" products_count="4" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`trending`,`operator`:`==`,`value`:`1`^]^]"}}</div>
+<!-- new product block -->
+<div class="newpro-block">
+<h2 class="chead" style="text-align: center;">NEW PRODUCTS</h2>
+<div class="block-note">Top view in this week</div>
+{{widget type="Magento\Catalog\Block\Product\Widget\NewWidget" display_type="all_products" show_pager="0" products_count="8" template="product/widget/new/content/new_grid.phtml"}}</div>
+
+<div class="ccontainer">{{block class="Magento\Cms\Block\Block" block_id="delivery-block"}}</div>
+

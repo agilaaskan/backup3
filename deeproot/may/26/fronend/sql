@@ -1,0 +1,41 @@
+
+<?php 
+            $sql = "SELECT value  FROM `core_config_data` WHERE `scope_id` = 1 AND `path` LIKE 'general/store_information/street_line1'";
+            $result = $connection->fetchAll($sql);
+            if(count($result)> 0){
+                    $st= $result['value']; ?>
+                    <p class="storeaddress"><?php echo $st; ?></p>
+                    <?php }
+    $sql1 = "SELECT value  FROM `core_config_data` WHERE `scope_id` = '$storeid' AND `path` LIKE 'general/store_information/street_line2'";
+            $result1 = $connection->fetchAll($sql1);
+                if(count($result1)> 0){
+                    $st1= $result1['value']; ?>
+                    <p class="storeaddress"><?php echo $st1;  ?></p>
+                <?php }
+            $sql2 = "SELECT value  FROM `core_config_data` WHERE `scope_id` = '$storeid' AND `path` LIKE 'general/store_information/city'";
+            $result2 = $connection->fetchAll($sql2);
+                if(count($result2)> 0){
+                    $city= $result2['value']; ?>
+                    <p class="storeaddress"><?php echo $city;  ?></p>
+                <?php }
+            $sql3 = "SELECT value  FROM `core_config_data` WHERE `scope_id` = '$storeid' AND `path` LIKE 'general/store_information/pincode'";
+            $result3 = $connection->fetchAll($sql3);
+                if(count($result3)> 0){
+                    $pincode= $result1['value']; ?>
+                    <p class="storeaddress"><?php echo $pincode;  ?></p>
+                <?php }
+            $sql4 = "SELECT value  FROM `core_config_data` WHERE `scope_id` = '$storeid' AND `path` LIKE 'general/store_information/country_id'";
+            $result4 = $connection->fetchAll($sql4);
+                if(count($result4)> 0){
+                    $country= $result1['value']; 
+                    if ($country == "US") {
+                        $country= "United State";
+                    }?>
+                <p class="storeaddress"><?php echo $country;  ?></p>
+                <?php }
+            $sql5 = "SELECT value  FROM `core_config_data` WHERE `scope_id` = '$storeid' AND `path` LIKE 'general/store_information/phone'";
+            $result5 = $connection->fetchAll($sql5);
+                if(count($result5)> 0){
+                    $phone= $result1['value']; ?>
+                    <p class="storeaddress">T: <?php echo $phone;?></p>
+                <?php }

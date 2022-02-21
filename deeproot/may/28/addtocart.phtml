@@ -1,0 +1,110 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product = $block->getProduct(); ?>
+<?php $buttonTitle = __('Add to Cart'); ?>
+
+<?php if ($_product->isSaleable()) :?>
+<!-- custom code -->
+<?php 
+$metrc = $_product->getData('metrc_no');
+$thc = $_product->getData('thc');
+$cbd = $_product->getData('cbd');
+$trp1 = $_product->getData('trp1');
+$trp2 = $_product->getData('trp2');
+$trp3 = $_product->getData('trp3');
+$terp1 = $_product->getData('terp1');
+$terp2 = $_product->getData('terp2');
+$terp3 = $_product->getData('terp3');
+$batch = $_product->getData('batch_info');
+?>
+<?php if ( ($metrc != '') || ($thc != '') || ($cbd != '') || ($trp1 != '') || ($trp2 != '') || ($trp3 != '') || ($terp1 != '') || ($terp2 != '') || ($terp3 != '') || ($batch != '') ) { ?>
+    <div class="custom-detail">
+    <h3>DETAILS</h3>
+    <?php if ($metrc != '') { ?>
+    <span><strong> METRC NO : </strong><?php echo $metrc ;?> | </span>
+    <?php } ?>
+    <?php if ($thc != '') { ?>
+        <span><strong> THC : </strong><?php echo $thc ;?> | </span>
+    <?php } ?>
+    <?php if ($cbd != '') { ?>
+        <span><strong> CBD : </strong><?php echo $cbd ;?> | </span>
+    <?php } ?>
+    <?php if ($trp1 != '') { ?>
+        <span><strong> TRP1 : </strong><?php echo $trp1 ;?> | </span>
+    <?php } ?>
+    <?php if ($trp2 != '') { ?>
+        <span><strong> TRP2 : </strong><?php echo $trp2 ;?> | </span>
+    <?php } ?>
+    <?php if ($trp3 != '') { ?>
+        <span><strong> TRP3 : </strong><?php echo $trp3 ;?> | </span>
+    <?php } ?>
+    <?php if ($terp1 != '') { ?>
+        <span><strong> TERP1 : </strong><?php echo $terp1 ;?> | </span>
+    <?php } ?>
+    <?php if ($terp2 != '') { ?>
+        <span><strong> TERP2 : </strong><?php echo $terp2 ;?> | </span>
+    <?php } ?>
+    <?php if ($terp3 != '') { ?>
+        <span><strong> TERP3 : </strong><?php echo $terp3 ;?> | </span>
+    <?php } ?>
+    <?php if ($batch != '') { ?>
+        <span><strong> BATCH INFO : </strong><?php echo $batch ;?> | </span>
+    <?php } ?>
+    </div>
+<?php } ?>
+<!-- custom code -->
+<div class="box-tocart">
+    <div class="fieldset">
+        <?php if ($block->shouldRenderQuantity()) :?>
+        <div class="field qty">
+            <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
+            <div class="control">
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       min="0"
+                       value="<?= $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                       class="input-text qty"
+                       data-validate="<?= $block->escapeHtmlAttr(json_encode($block->getQuantityValidators())) ?>"
+                       />
+            </div>
+        </div>
+        <?php endif; ?>
+        <div class="actions">
+            <button type="submit"
+                    title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
+                    class="action primary tocart"
+                    id="product-addtocart-button" disabled>
+                <span><?= $block->escapeHtml($buttonTitle) ?></span>
+            </button>
+            <?= $block->getChildHtml('', true) ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>
+<style>
+.custom-detail {
+    padding: 10px 0px;
+}
+.custom-detail strong {
+    color: #58b2bf;
+}
+.custom-detail span {
+    color: #888;
+}
+</style>
+
