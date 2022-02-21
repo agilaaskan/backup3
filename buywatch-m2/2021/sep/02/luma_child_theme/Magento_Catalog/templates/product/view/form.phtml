@@ -1,0 +1,103 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+
+/**
+ * Product view template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php $_helper = $this->helper(Magento\Catalog\Helper\Output::class); ?>
+<?php $_product = $block->getProduct(); ?>
+<?php 
+
+    $productId = $block->getProduct()->getId(); 
+    $cat_ids = $block->getProduct()->getCategoryIds();
+
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+    $product = $objectManager->create('Magento\Catalog\Model\Product');
+    $productt = $objectManager->create('Magento\Catalog\Model\Product');
+
+    $category = $objectManager->create('Magento\Catalog\Model\Category')->load($cat_ids[0]);
+    // print_r($category->getUrl());
+    $category_product = $category->getProductCollection()->addAttributeToSort('position', 'asc');
+    $category_product->addAttributeToFilter('status',1);
+    $category_product->addAttributeToFilter('visibility',4);
+
+
+
+
+    $cat_prod_ids = $category_product->getAllIds();
+    $first_id = current($cat_prod_ids);
+    $last_id = end($cat_prod_ids);
+
+    $_pos = array_search($productId, $cat_prod_ids); // get position of current product
+    $_next_pos = $_pos+1;
+    $_prev_pos = $_pos-1;
+    $keys = array_keys($cat_prod_ids);
+
+    if(in_array($_next_pos, $keys)){
+        $_next_prod = $product->load($cat_prod_ids[$_next_pos]);
+    }
+    if(in_array($_prev_pos, $keys)){
+        $_prev_prod = $productt->load($cat_prod_ids[$_prev_pos]);   
+    }
+
+?>
+
+<div class="previous_next_go">
+<?php echo "current id".$productId."<pre>";
+print_r($cat_prod_ids);?>
+<?php if(in_array($_prev_pos, $keys)): ?>
+    <?php if($first_id != $productId) { ?>
+            <a href="<?php print_r($_prev_prod->getProductUrl()); ?>"><span><i class="icon-left"></i> Prev</span></a>
+    <?php } ?>
+    <?php endif; ?>
+
+    <?php if(in_array($_next_pos, $keys)): ?>
+        <?php if($last_id != $productId) { ?>
+            <a href="<?php print_r($_next_prod->getProductUrl()); ?>"><span>Next <i class="icon-right"></i></span></a>
+        <?php } ?>
+    <?php endif; ?>
+</div> 
+
+<div class="product-add-form">
+    <form data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>"
+          action="<?= $block->escapeUrl($block->getSubmitUrl($_product)) ?>" method="post"
+          id="product_addtocart_form"<?php if ($_product->getOptions()) :?> enctype="multipart/form-data"<?php endif; ?>>
+        <input type="hidden" name="product" value="<?= (int)$_product->getId() ?>" />
+        <input type="hidden" name="selected_configurable_option" value="" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+        <input type="hidden" name="item"  value="<?= (int)$block->getRequest()->getParam('id') ?>" />
+        <?= $block->getBlockHtml('formkey') ?>
+        <?= $block->getChildHtml('form_top') ?>
+        <?php if (!$block->hasOptions()) :?>
+            <?= $block->getChildHtml('product_info_form_content') ?>
+        <?php else :?>
+            <?php if ($_product->isSaleable() && $block->getOptionsContainer() == 'container1') :?>
+                <?= $block->getChildChildHtml('options_container') ?>
+            <?php endif;?>
+        <?php endif; ?>
+
+        <?php if ($_product->isSaleable() && $block->hasOptions() && $block->getOptionsContainer() == 'container2') :?>
+            <?= $block->getChildChildHtml('options_container') ?>
+        <?php endif;?>
+        <?= $block->getChildHtml('form_bottom') ?>
+    </form>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "[data-role=priceBox][data-price-box=product-id-<?= $block->escapeHtml($_product->getId()) ?>]": {
+            "priceBox": {
+                "priceConfig":  <?= /* @noEscape */ $block->getJsonConfig() ?>
+            }
+        }
+    }
+</script>

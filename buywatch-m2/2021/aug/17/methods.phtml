@@ -1,0 +1,116 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+?>
+<?php
+/** @var $block \Magento\Checkout\Block\Cart */
+?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+$baseUrl = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
+?>
+<?php if (!$block->hasError()) :?>
+    <?php $methods = $block->getMethods('methods') ?: $block->getMethods('top_methods') ?>
+    <ul class="checkout methods items checkout-methods-items">
+        <?php foreach ($methods as $method) :?>
+            <?php $methodHtml = $block->getMethodHtml($method); ?>
+            <?php if (trim($methodHtml) !== '') :?>
+                <li class="item"><?= /* @noEscape */ $methodHtml ?></li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        <li class="payment_2"><span class="paypal-or">-OR-</span></li>
+            <li class="method-afterpay_onetouch">
+
+                <h3>Check out with Afterpay and pay over time.</h3>
+                <p>Simply pay 4 fornightly payments of $49.75.</p>
+                <p>Use your payment card, instant approval.<a href="#afterpay-what-is-modal" class="afterpay-what-is-modal-trigger">Learn more</a></p>
+            </li>
+            <li class="payment_3">  <div id="cliskpop"><div zm-asset="cartwidget" zm-widget="popup" zm-popup-asset="termsdialog" class="zippay-widget-product zippay-widget-product-cart zip-widget__wrapper zip-widget__wrapper--display-popup zip-widget__wrapper--type-cartwidget" data-zm-rendered="true">
+                <meta charset="utf-8">
+                <title>Zip</title>
+                    
+                    <style>
+                    @font-face {
+                    font-family: 'Cooper Lt BT';
+                    src: url(https://static.zipmoney.com.au/fonts/CooperLight.woff2);
+                }
+                @font-face {
+                    font-family: 'Sharp Grotesk Medium';
+                    src: url(https://static.zipmoney.com.au/fonts/SharpGroteskMedium20.woff);
+                }
+                @font-face {
+                    font-family: 'Sharp Grotesk Book';
+                    src: url(https://static.zipmoney.com.au/fonts/SharpGroteskBook20.woff2);
+                }
+                        .zip-container {margin: 0 auto; align-items: center;}
+                        .zip-container .zip-logo{
+                            height: 35px;
+                            vertical-align: middle;
+                            display: inline-block;
+                            margin: -2px 0 5px 0px;
+                        }
+                        .zip-container span{font-size: 16px; margin-top: 2px; margin-bottom: 0px; display: inline;}
+                        .zip-payment-amount{font-weight: 700;}			
+                        
+                        #zip-info-link {
+                                line-height: normal;
+                                display: inline-block;
+                                padding: 0;
+                                margin: 0;
+                                border: none;
+                                color: inherit;
+                                text-decoration: none;
+                                background: transparent;
+                                font-family: sans-serif;
+                                cursor: pointer;
+                                text-align: center;
+                                transition: background 250ms ease-in-out, transform 150ms ease;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                        }	
+
+                        .zip-learn-more{
+                            padding-left: 1px;
+                            font-size: smaller!important;
+                        }
+
+                    </style>
+                <p class="zip-container">
+                <span>or Zip it from </span><span class="zip-payment-amount">$10/week</span> <span>with</span>
+                <img class="zip-logo" src="https://static.zipmoney.com.au/assets/default/product-widget/img/zip-button-wht.svg"> 
+                <button id="zip-info-link" class="zip-info-link" tabindex="0" aria-label="Zip payment information - Opens a dialog" title="Zip payment Information">
+                        <span class="zip-learn-more">ⓘ</span>
+                </button>
+                </p>
+
+
+                </div></div>
+                <style type="text/css">
+                #cliskpop{position:relative;}
+                #cliskpop::after {clear: both; display: block; content: ""; position: absolute; height: 60px; width: 262px; top: 15px; cursor:pointer;}
+                </style>
+                <script type="text/javascript">
+                jQuery("#cliskpop").click(function(){
+                    jQuery('.pay-banner-new img').click();
+                }); 
+                </script>
+                </li>
+            <li class="payment_4">
+                <div class="widget-product-calc zipmoney-product-tagline"> 
+                    <span data-zm-widget="tagline" data-zm-info="true" class="zip-widget__wrapper zip-widget__wrapper--display-tagline">
+                        <div class="zip-widget zip-widget__tagline" title="Zip now, Pay later">
+                            <span class="text">own it from $10/wk</span>
+                            <img class="logo" alt="Zip Payment" src="https://zip.co/static/assets/default/product-widget/img/zip-button-wht.svg">
+                            <button class="zip-info-link" id="zip-info-link" title="Zip payment Information">
+                                <span class="zip-learn-more">ⓘ</span>
+                            </button>
+                        </div>
+                    </span> 
+                </div>
+            </li>
+    </ul>
+<?php endif; ?>

@@ -1,0 +1,70 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+/** @var $configProvider \Magento\Search\ViewModel\ConfigProvider */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+$configProvider = $block->getData('configProvider');
+?>
+<div class="block block-search">
+    <div class="block block-title"><strong><?= $block->escapeHtml(__('Search')) ?></strong></div>
+    <div class="block block-content">
+        <form class="form minisearch" id="search_mini_form"
+              action="<?= $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
+            <div class="field search">
+                <label class="label" for="search" data-role="minisearch-label">
+                    <span><?= $block->escapeHtml(__('Search')) ?></span>
+                </label>
+                <div class="control">
+                    <input id="search"
+                            <?php if ($configProvider->isSuggestionsAllowed()):?>
+                               data-mage-init='{"quickSearch":{
+                                    "formSelector":"#search_mini_form",
+                                    "url":"<?= $block->escapeUrl($helper->getSuggestUrl())?>",
+                                    "destinationSelector":"#search_autocomplete",
+                                    "minSearchLength":"<?= $block->escapeHtml($helper->getMinQueryLength()) ?>"}
+                               }'
+                            <?php endif;?>
+                           type="text"
+                           name="<?= $block->escapeHtmlAttr($helper->getQueryParamName()) ?>"
+                           value="<?= /* @noEscape */ $helper->getEscapedQueryText() ?>"
+                           placeholder="<?= $block->escapeHtmlAttr(__('Hello Human, what are you looking for?')) ?>"
+                           class="input-text"
+                           maxlength="<?= $block->escapeHtmlAttr($helper->getMaxQueryLength()) ?>"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-autocomplete="both"
+                           autocomplete="off"
+                           aria-expanded="false"/>
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <?= $block->getChildHtml() ?>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit"
+                    title="<?= $block->escapeHtml(__('Search')) ?>"
+                    class="action search"
+                    aria-label="Search"
+                >
+                <i class="fa fa-search"></i>
+                    <span><?= $block->escapeHtml(__('Search')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<?php 
+ echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
+ ->setBlockId('static_block_identifier')->toHtml();
+?>
+
+<div class="fordesc">
+                <div class="accountarea"> <a href="https://magento2.buywatchesonline.com.au/customer/account/"><i class="icon-profile-1"></i></a> </div>
+</div>

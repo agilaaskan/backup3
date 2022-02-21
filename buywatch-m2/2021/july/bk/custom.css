@@ -1,0 +1,1618 @@
+@font-face {
+    font-family: 'porto';
+    src: url(../font/porto.eot?88150129);
+    src: url(../font/porto.eot#iefix?88150129) format('embedded-opentype'),
+         url(../font/porto.woff?88150129) format('woff'),
+         url(../font/porto.ttf?88150129) format('truetype'),
+         url(../font/porto.svg?88150129#porto) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+      font-family: "icomoon";
+      src: url(../font/icomoon.eot?88150129);
+      src: url(../font/icomoon.eot#iefix?88150129) format('embedded-opentype'),
+      url(../font/icomoon.woff?88150129) format('woff'),
+      url(../font/icomoon.ttf?88150129) format('truetype'),
+      url(../font/icomoon.svg#icomoon?88150129) format('svg');
+      font-weight: normal;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  @font-face
+  {
+      font-family:'FontAwesome';
+      src:url(../font/fontawesome-webfont.eot?v=4.0.3);
+      src:url(../font/fontawesome-webfont.eot?#iefix&v=4.0.3) format('embedded-opentype'),
+      url(../font/fontawesome-webfont.woff?v=4.0.3) format('woff'),
+      url(../font/fontawesome-webfont.ttf?v=4.0.3) format('truetype'),
+      url(../font/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular) format('svg');
+      font-weight:normal;
+      font-style:normal
+    }
+.page-header .panel.wrapper{display: none;}
+.page-header, .sections.nav-sections,nav.navigation{background-color: #464a4e;}
+
+@media (min-width: 1200px){.page-wrapper .page-header .header.content {width: 1170px!important;}}
+@media (min-width: 992px){.page-wrapper .page-header .header.content {width: 970px;}}
+@media (min-width: 768px){.page-wrapper .page-header .header.content {width: 750px;}}
+
+@media only screen and (min-width: 420px){.page-wrapper .page-header .header.content a.logo img {width: 248px;}}
+.hometopimgs {
+    margin-top: 0px !important;}
+
+.navigation .level0>.level-top {text-transform: uppercase;
+    font-family: "Open Sans";
+    font-size: 14px;
+    color: #ffffff !important;}
+.navigation li.level0 {height: 24px;}
+.navigation .level0>.level-top {line-height: 14px !important;}
+
+.block-search .action.search {position: absolute;left: 116px;z-index: 1;}
+.block-search .action.search:before{font-size: 22px;color: #000000;
+    font-weight: bold;}
+/* .minicart-wrapper .action.showcart:before {
+    background-image: url(http://magento2.tiptopshop.com.au/pub/media/icons/cart.png);
+    background-size: 20px 22px;
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    content: "" !important;
+    margin-right: 5px;
+} */
+/* i.icon-profile-1:before {
+    background-image: url(http://magento2.tiptopshop.com.au/pub/media/icons/acc.png);
+    background-size: 18px 19px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "" !important;
+    margin-right: 5px;
+} */
+.header-top-content.contact-info {
+    float: right;
+    font-size: 14px;
+    margin-top: 0.3%;
+    position: relative;
+    right: -1.5%;
+    width: 15%;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.header-top-content.contact-info .customer-support-title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    text-transform: uppercase;
+}
+.header-top-content.contact-info span a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+}
+.header-top-content.contact-info .saprator {
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    top: -2px;
+}
+@media only screen and (min-width: 768px){
+	.row{margin-left:-15px;margin-right:-15px;display:flex;}
+	.page-wrapper .page-header .header.content {justify-content: flex-start;
+    vertical-align: middle;padding: 10px 0 8px 0 !important;position: relative;
+    text-align: left;}
+	.page-wrapper .page-header .header.content {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+	.block-search input{padding: 7px 35px 4px;}
+	.page-wrapper .page-header .header.content {justify-content: flex-start;
+    vertical-align: middle;padding: 10px 0 8px 0 !important;position: relative;
+    text-align: left;}
+	.block-search .block-content form#search_mini_form {width: 505px;}
+.block-search .block-content form#search_mini_form {position: static;
+    left: 50%;z-index: 130;top: 50%;margin-left: 0;margin-top: 0px;float: right;}
+.minicart-wrapper {
+    /* top: 59px;
+    z-index: 11;right: -135px; */
+    top: 59px;
+    z-index: 11;
+    right: 6%;
+    margin-left: 0px !important;
+}
+.page-wrapper .page-header .header.content a.logo {text-align: center;display: inline-block;float: left;margin: 0px auto;}
+.block-search {float:left !important;padding-left: 0px !important;text-align: center !important;display: inline-block !important;
+    width: 52% !important;margin-top: 8px !important;}
+i.icon-profile-1 {
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 65px;
+    z-index: 11;
+    right: -95px;
+}}
+
+@media only screen and (max-width: 767px){
+.header-top-content.contact-info{display:none;}}
+
+.block-search .minisearch input#search{position:static;}
+.block-search .minisearch .label{display:none;}
+
+/*HeaderMobile*/
+@media (min-width: 320px) and (max-width: 420px){
+.page-wrapper .page-header .header.content a.logo img {
+    width: 202px;
+    height: auto;
+}}
+@media (min-width: 320px) and (max-width: 529px){
+    .block-search .minisearch input#search {font-size: 11px !important;}}
+@media (min-width: 320px) and (max-width: 767px){
+.block-search .minisearch input#search {
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-right: none;
+    color: #777;
+    line-height: 42px;
+    border-radius: 10px 0 0 10px;
+    height: 42px;
+    padding: 0 13px 0 10px;
+    width: 100%!important;
+    float: left;
+}}
+@media (max-width: 991px) {
+.minicart-wrapper{
+    width: auto;
+    position: relative;
+    top: -6px;
+    left: 0;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}}
+
+.block-search .minisearch input#search::after {
+    background: url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/plumrocket/pramp/search-icon.jpg);
+    display: block;
+    width: 73px;
+    float: left;
+    height: 42px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (min-width: 320px) and (max-width: 414px){
+.page-wrapper .page-header .header.content {
+    padding: 10px 0 15px 0 !important;
+}}
+
+@media (max-width: 767px){
+.nav-toggle:before {
+    content: "" !important;
+    background: url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/iconmenu.png) no-repeat scroll 0 0;
+    display: inline-block !important;
+    width: 30px;
+    height: 20px;}
+
+/* .minicart-wrapper .action.showcart:before {
+    background-image: url(http://magento2.tiptopshop.com.au/pub/media/icons/cart.png);
+    background-size: 19px 21px;
+    display: inline-block;background-repeat: no-repeat;
+    width: 17px;
+    height: 22px;
+    content: "" !important;
+    margin-right: 5px;
+} */
+.minicart-wrapper {top: 2x;
+    left: 70px;
+    order: 3;}
+.fordesc {
+    order: 1;
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
+.block-search .control::after {
+    background: url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/plumrocket/pramp/search-icon.jpg);
+    display: block;
+    width: 73px;
+    float: left;
+    height: 42px;
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: 0;
+}
+
+.block.block-search{
+    order: 5;
+    position: relative;
+    left: 68px;
+    width: calc(100% - 90px);
+}
+.page-wrapper .page-header .header.content a.logo{
+    order: 2;
+    width: 100%;
+    margin: 0px;
+    max-width: 70% !important;
+}
+.nav-toggle{
+    position: relative;left: 22px;top: 41px;
+}
+.page-wrapper .page-header .header.content{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0 8px 0;
+}
+.block-search .minisearch input#search{margin: 0px;}
+.block-search .control {
+    border-top: 0px solid #ccc;}
+
+
+}
+
+
+
+
+/*Footer*/
+
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;}
+input,button{font-family:inherit;font-size:inherit;line-height:inherit;}
+a{color:#337ab7;text-decoration:none;}
+a:hover,a:focus{color:#23527c;text-decoration:underline;}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+img{vertical-align:middle;}
+p{margin:0 0 10px;}
+ul{margin-top:0;margin-bottom:10px;}
+address{margin-bottom:20px;font-style:normal;line-height:1.42857143;}
+.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;}
+@media (min-width:768px){
+.container{width:750px;}
+}
+@media (min-width:992px){
+.container{width:970px;}
+}
+@media (min-width:1200px){
+.container{width:1170px;}
+}
+.row{margin-left:-15px;margin-right:-15px;}
+.col-sm-3{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+@media (min-width:768px){
+.col-sm-3{float:left;}
+.col-sm-3{width:25%;}
+}
+.container:before,.container:after,.row:before,.row:after{content:" ";display:table;}
+.container:after,.row:after{clear:both;}
+
+body{background-color:#fff;font:13px/1 'Open Sans',Arial,Helvetica,sans-serif;color:#777;text-align:center;}
+body{overflow-x:hidden;}
+img{border:0;vertical-align:top;}
+a{color:#08a79d;text-decoration:none;transition:all 0.3s;}
+a:visited,a:focus{text-decoration:none;}
+a:hover{color:#08a79d;text-decoration:underline;}
+:focus{outline:0;}
+form{display:inline;}
+p{margin:0 0 15px;line-height:1.5;}
+strong{font-weight:bold;}
+address{text-align:left;margin:0;}
+ul{list-style:none;margin:0;padding:0;}
+.label{color:#000;}
+.theme-color{color:#08a79d!important;}
+input,button{font-size:12px;vertical-align:middle;color:#08a79d;}
+/*input.input-text{background:#fff;border:1px solid #ccc;padding:2px 8px;height:26px;color:#777;font-size:13px;border-radius:3px;}*/
+/*input.input-text{padding:8px;}*/
+button.button::-moz-focus-inner{padding:0;border:0;}
+button.button{-webkit-border-fit:lines;}
+button.button{overflow:visible;width:auto;border:0;padding:0;margin:0;background:transparent;cursor:pointer;}
+button.button span{display:block;border:0;background:#08b484;padding:0 15px;font-weight:normal;font-size:14px;text-align:center;white-space:nowrap;color:#fff;line-height:38px;border-radius:5px;}
+button.button span span{border:0;padding:0;color:inherit;border-width:0;background:transparent;line-height:inherit;}
+button.button:hover span{opacity:.9;filter:alpha(opacity=90);}
+.links li{display:inline;}
+.block{margin:0 0 40px;}
+.block .block-title{margin:5px 0 10px;line-height:1.2;font-size:16px;font-weight:bold;color:#313131;}
+.block.block-subscribe{border-radius:5px;}
+.block.block-subscribe .block-title{background-color:transparent;border:0;}
+.block.block-subscribe .block-title strong{font-size:1.4em;text-transform:none;font-weight:400;padding-bottom:10px;}
+.block.block-subscribe .block-content{background-color:transparent;}
+.block.block-subscribe .input-box{padding:10px 20px 20px;}
+.block.block-subscribe .input-box input.input-text{width:100%;height:34px;padding:5px;}
+.footer-container{border-top:0;}
+.footer .block .block-content{background-color:transparent;}
+.footer-middle{background-color:#121214;color:#777;padding:40px 0;font-size:13px;}
+.footer-middle a{color:#fff;}
+.footer-middle a:hover{color:#fff;text-decoration:underline;}
+.footer-middle ul.links li i{margin-left:-5px !important;}
+.footer-middle ul.features{padding:0;margin-top:-5px;}
+.footer-middle ul.features li{position:relative;padding:10px 0;line-height:1;display:block;}
+.footer-middle ul.features li i{margin-left:-5px;margin-right:3px;}
+.footer-middle p{margin-bottom:15px;color:#777;}
+.footer-middle p.label{display:block;text-align:left;font-size:13px;font-weight:400;padding:0;}
+.footer-middle ul{padding:0;}
+.footer-middle .block{text-align:left;line-height:1.5;border:0;margin:0;background-color:transparent;float:none !important;width:auto;}
+.footer-middle .block .block-title{margin-bottom:20px;}
+.footer-middle .block .block-title strong{font-weight:400;padding:0;font-size:16px;line-height:inherit;color:#fff;text-transform:none;}
+.footer-middle .contact-info li{padding:5px 0;}
+.footer-middle .contact-info li:first-child{padding-top:0;}
+.footer-middle .contact-info p{display:inline-block;vertical-align:top;margin:0;}
+.footer-middle .contact-info i{color:#777;display:inline-block;vertical-align:top;font-size:14px;line-height:18px;}
+.footer-middle .block.block-subscribe .input-box{padding:0;margin-top:50px;}
+.footer-middle .block.block-subscribe .input-box input.input-text{float:left;height:30px;padding:0 10px;border:0;background-color:#dcdcdc;border-radius:5px;color: #777;font-size: 13px;}
+.footer-middle .block.block-subscribe .input-box button{float:left;width:75px;margin-left:-75px;}
+.footer-middle .block.block-subscribe .input-box button span{padding:0;font-size:14px;height:30px;line-height:30px;border-radius:0 5px 5px 0;font-weight:normal;min-width:75px;}
+.footer-bottom{min-height:50px;line-height:40px;background-color:#0c0c0c;padding:25px 0;}
+.footer-bottom a.logo{float:left;margin: 0 45px 0 0;}
+.footer-bottom a.logo img{display:inline-block;vertical-align:middle;}
+.footer-bottom .custom-block{float:left;margin-left:60px;}
+.footer-bottom .custom-block img{max-width:100%;display:inline-block;vertical-align:middle;}
+.footer-bottom address{float:right;line-height:40px;}
+.clearer:after,.footer:after,.block .block-content:after,.block-content:after{display:block;content:".";clear:both;font-size:0;line-height:0;height:0;overflow:hidden;}
+.footer .container{max-width:100%;}
+a.shopperlink img{width:auto!important;}
+@media (max-width: 767px){
+a.shopperlink{display:none!important;}
+}
+
+@media (max-width:767px){
+.footer-bottom{text-align:center;}
+.footer-bottom .custom-block{float:none;margin:0;}
+.footer-bottom address{float:none;text-align:center;}
+}
+@media (max-width:480px){
+.footer-bottom .custom-block{margin-left:0;}
+.footer-bottom address{float:left;line-height:1.4;margin:5px 0;}
+}
+
+.footer-middle>.container{position:relative;}
+input::-ms-clear{display:none;}
+
+.col-sm-3{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+@media (min-width: 768px){
+.col-sm-3{float:left;}
+.col-sm-3{width:25%;}
+}
+.row:before,.row:after{content:" ";display:table;}
+.row:after{clear:both;}
+.footer-middle ul.links {
+    padding: 0;display: block !important;
+    margin-top: -5px;
+}
+.footer-middle ul.links li {
+    position: relative !important;
+    padding: 10px 0 !important;margin: 0px !important;
+    line-height: 1 !important;
+    display: block !important;font-size: 13px !important;
+}
+.footer-middle a {
+    color: #fff !important;
+}
+
+.footer.content {
+    padding: 0px !important;
+    max-width: 100% !important;
+}
+.widget.block.block-static-block {
+    float: none !important;margin: 0px;
+}
+footer.page-footer .footer.content .block.newsletter,.footer.content ul.footer.links,.footer.content .switcher.store,small.copyright {
+    display: none !important;
+}
+footer.page-footer {
+    padding: 0px;
+}
+.footer.content .links li {
+    background: transparent;
+    border: none;}
+    
+    
+/*Home Page 3May*/
+
+.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;}
+@media (min-width:768px){
+.container{width:750px;}
+}
+@media (min-width:992px){
+.container{width:970px;}
+}
+@media (min-width:1200px){
+.container{width:1170px;}
+}
+.row{margin-left:-15px;margin-right:-15px;}
+.col-sm-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+@media (min-width:768px){
+.col-sm-12{float:left;}
+.col-sm-12{width:100%;}
+}
+.clearfix:before,.clearfix:after,.container:before,.container:after,.row:before,.row:after{content:" ";display:table;}
+.clearfix:after,.container:after,.row:after{clear:both;}
+
+.owl-carousel .owl-wrapper:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+.owl-carousel{display:none;position:relative;width:100%;-ms-touch-action:pan-y;}
+.owl-carousel .owl-wrapper{display:none;position:relative;-webkit-transform:translate3d(0px, 0px, 0px);}
+.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%;}
+.owl-carousel .owl-item{float:left;}
+.owl-controls .owl-buttons div{cursor:pointer;}
+.owl-controls{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.owl-carousel  .owl-wrapper,.owl-carousel  .owl-item{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);}
+/*! CSS Used from: https://www.buywatchesonline.com.au/js/smartwave/jquery/plugins/owl-carousel/owl.theme.css?5c3bb0283ab */
+.owl-theme .owl-controls{margin-top:10px;text-align:center;}
+.owl-theme .owl-controls .owl-buttons div{color:#FFF;display:inline-block;zoom:1;*display:inline;margin:5px;padding:3px 10px;font-size:12px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;background:#869791;filter:Alpha(Opacity=50);opacity:0.5;}
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{filter:Alpha(Opacity=100);opacity:1;text-decoration:none;}
+
+.main-container{padding:20px 0 50px;min-height:400px;}
+.cms-index-index .main-container{padding:0px;min-height:400px;}
+.main{text-align:left;}
+.col-main{padding-bottom:30px;}
+.owl-carousel .owl-wrapper-outer{cursor:move;cursor:-webkit-grab;cursor:-moz-grab;}
+.std strong{font-weight:bold;}
+.std i{font-style:italic;}
+.partner-banner_img{max-width:100%;}
+.hometopimgs_link{position:relative;color:#fff;display:block;}
+.hometopimgs_link:hover{position:relative;color:#fff;}
+.item .item-area .details-area .ratings .amount{display:none;}
+a.addtocart{color:#333;background-color:#fff;font-size:14px;padding:0 10px 0 5px;display:inline-block;height:32px;line-height:30px;border-radius:5px;border:1px solid #ccc;}
+a.addtocart i.icon-cart{font-size:15px;}
+a.addtocart:hover{text-decoration:none;}
+a.addtowishlist{color:#ed4949;background-color:transparent;font-size:17px;display:inline-block;height:32px;width:32px;line-height:32px;border:1px solid #ed4949;border-radius:5px;text-align:center;}
+a.addtowishlist:hover{color:#ed4949;}
+a.comparelink{color:#52b9b5;background-color:transparent;font-size:17px;display:inline-block;height:32px;width:32px;line-height:32px;border:1px solid #52b9b5;border-radius:5px;text-align:center;}
+a.comparelink:hover{color:#52b9b5;}
+.item .details-area .actions{margin:0 -10px;}
+.item .details-area .actions a{margin:10px 1px;vertical-align:middle;visibility:hidden;opacity:0;filter:Alpha(Opacity=0);}
+.item .details-area .actions a.addtowishlist{display:none;position:relative;right:-37px;}
+.item:hover .details-area .actions a.addtowishlist{visibility:visible;opacity:1;filter:Alpha(Opacity=100);right:0;}
+.item .details-area .actions a.comparelink{display:none;position:relative;left:-37px;}
+.item:hover .details-area .actions a.comparelink{visibility:visible;opacity:1;filter:Alpha(Opacity=100);left:0;}
+.item .details-area .actions a.addtocart{visibility:visible;opacity:1;filter:Alpha(Opacity=100);}
+.item:hover .details-area .actions a.addtocart{border-color:#05b59d;color:#fff;background-color:#05b59d;}
+.details-area .actions a:hover{opacity:0.8;filter:Alpha(Opacity=80);}
+.product-image-area{position:relative;background:#fff;overflow:hidden;border-radius:7px;padding:3px;}
+.product-label{position:absolute;font-size:14px;font-weight:700;color:#fff;line-height:1;top:10px;z-index:3;}
+.product-label span{position:relative;padding:7px 10px;font-size:12px;font-weight:600;text-transform:uppercase;border-radius:4px;}
+span.new-product-icon {
+    background-color: #62b959;
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+.product-label-new {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    top: 10px;
+    z-index: 3;
+}
+.ratings{font-size:11px;line-height:1.25;margin:3px 0;background:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/rating-bar.png) center no-repeat;height:14px;}
+.rating-box{width:69px;height:11px;font-size:0;line-height:0;text-indent:-999em;overflow:hidden;position:relative;}
+.rating-box:before{font-family:"porto";content:"\e852\20\e852\20\e852\20\e852\20\e852";width:69px;height:11px;color:#ddd;display:block;font-size:11px;line-height:11px;}
+.rating-box .rating{float:left;height:11px;position:absolute;left:0;top:0;overflow:hidden;}
+.rating-box .rating:before{font-family:"porto";content:"\e852\20\e852\20\e852\20\e852\20\e852";width:69px;height:11px;color:#ffc600;display:block;font-size:11px;line-height:11px;}
+.ratings .rating-box{display:inline-block;vertical-align:middle;}
+.product-name{margin:10px 0;font-size:1em;font-weight:normal;}
+.product-name.cat-grid{height:110px;}
+.product-name a{color:#777;}
+.product-name a:hover{text-decoration:none;}
+.clearer:after,.main:after,.col-main:after,.ratings:after{display:block;content:".";clear:both;font-size:0;line-height:0;height:0;overflow:hidden;}
+.owl-item .item{max-width:100%;float:none!important;text-align:center;}
+.owl-item .item img{max-width:100%;}
+h2.filter-title.newbar{display:block;background:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/slider-bar.jpg) right no-repeat;font-size:16px;font-weight:300;line-height:42px;margin:0;color:#313131;text-transform:uppercase;text-align:left;margin-top:4px;}
+h2.filter-title{background:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/slider-bar.png) right no-repeat;font-size:16px;font-weight:300;line-height:42px;margin:0;color:#313131;text-transform:uppercase;text-align:left;margin-top:4px;}
+h2.filter-title .content{background-color:#fff;padding-right:20px;display:inline;}
+.filter-products .products div.item{float:left;padding:10px;}
+.filter-products .products div.item .item-area{width:100%;position:relative;}
+.filter-products .products div.item .product-image{width:100%;min-height:60px;display:block;position:relative;z-index:0;overflow:hidden;border-radius:3px;background:#fff;}
+.filter-products .products div.item .product-image img{width:100%;transition:opacity 0.3s;}
+.filter-products .products div.item .details-area{padding:10px;text-align:center;}
+.filter-products .products div.item .details-area .product-name{margin:0 0 3px 0;}
+.filter-products .products div.item .details-area .product-name a{font-size:14px;}
+.owl-top-narrow{margin:0 -10px;}
+.owl-top-narrow .owl-item .item{padding:0 10px;}
+.owl-top-narrow .owl-controls{position:absolute;right:30px;top:-33px;margin:0;}
+.owl-top-narrow .owl-controls .owl-buttons div{color:#08c;background:transparent;padding:0;margin:0;font-size:18px;}
+.owl-carousel.owl-theme .owl-controls.clickable .owl-buttons div{opacity:1;filter:Alpha(Opacity=100);transition:all 0.2s;}
+.owl-carousel.owl-theme .owl-controls.clickable .owl-buttons div:hover{opacity:0.9;filter:Alpha(Opacity=90);}
+.product-image{position:relative;display:block;}
+a.product-image{z-index:1;}
+.product-image img{max-width:100%;height:auto;}
+.hometopimgs{width:100%;}
+.hometopimgs-item{float:left;width:49.4%;}
+.hometopimgs .hometopimgs-item:last-child{float:right;}
+.hometopimgs_link:hover img{opacity:0.65;}
+.hometopimgs .imageitem{width:100%;cursor:pointer;position:relative;margin-bottom:4%;}
+.hometopimgs_mobile .imageitem{margin-bottom:2%;}
+.hometopimgs_mobile .imageitem:nth-child(odd){float:left;clear:left;}
+.hometopimgs_mobile .imageitem:nth-child(even){float:right;clear:right;}
+.imageitem:hover img{opacity:0.65;}
+.products.homepageFliter .item{float:left;width:33.33%;min-height:458px;}
+.hometop-left-part{float:left;margin-right:8px;text-align:center;width:20%;}
+.hometop-left-part .imageitem{margin-bottom:4%;text-align:center;}
+.home-right-part{float:left;width:76%;}
+.hometop-left-part .imageitem.img-mobile{display:none;}
+.hometop-left-part.right-part-icon{background-color:#f7f7f8;float:left;margin-left:8px;margin-right:0;margin-top:2.7%;padding:15px;text-align:right;width:19%;}
+#featured_product{float:left;width:80%;}
+.left-block-text-small{font-weight:700;line-height:16px;color:#000;}
+.product .product--price{display:table;padding:0 0px 10px;text-decoration:none;width:100%;}
+.product .price--container{font-size:2rem;}
+.product .price--container .price--grey-holder{font-size:1rem;text-align:center;}
+.price--rrp{color:#000;font-weight:600;text-decoration:none;line-height:23px;font-weight:700;text-align:center;}
+.price--sell-price{-moz-box-align:stretch;-moz-box-flex:1;align-items:stretch;display:inline-flex;flex:1 0 auto;flex-flow:row nowrap;}
+.price--sell-price > .price--inner::after{content:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/aero.png);height:100%;left:100%;top:0;width:0.5em;width:9px;height:39px;float:left;border-top:solid 1px #d0d0d0;border-bottom:solid 1px #d0d0d0;}
+.product .price--inner-inner{min-width:3.8em;background:#FF0000;color:#fff;float:left;height:39px;line-height:39px;font-weight:700;text-align:center;}
+.price--savings{-moz-box-align:center;-moz-box-flex:1;-moz-box-pack:center;align-items:center;background:#fff none repeat scroll 0 0;border:1px solid #d0d0d0;color:#000;display:flex;flex:1 0 auto;flex-flow:column nowrap;font-size:0.375em;justify-content:center;line-height:1.2;padding:0.15em 0.5em 0.15em 0.5em;font-size:0.5em;text-align:center;text-transform:uppercase;border-left:none;font-weight:600;}
+.price--currency-sign{font-size:0.444em;vertical-align:super;line-height:0.444em;}
+.price--savings-value{font-weight:700;}
+.payment-text-add{font-size:14px;margin-top:3px;}
+.shipps-text-add{font-size:14px;padding-top:3px;color:#FF0000;}
+@media (min-width: 768px) and (max-width: 1024px){
+.filter-products .products div.item .details-area .product-name{height:112px;}
+}
+@media (min-width: 600px) and (max-width: 769px){
+.products.homepageFliter .item{width:33.33%;}
+}
+@media (max-width: 767px){
+.hometop-left-part{width:100%;}
+.home-right-part{width:100%;}
+.filter-products .products div.item .details-area .product-name{height:112px;}
+.hometop-left-part .imageitem.img-mobile{display:block;}
+.hometop-left-part .imageitem.img-desktop{display:none;}
+}
+@media (min-width: 460px) and (max-width: 599px){
+.products.homepageFliter .item{width:50%;}
+}
+@media (min-width: 480px) and (max-width: 767px){
+.hometopimgs .imageitem{width:50%;padding:10px;}
+}
+@media (max-width: 459px){
+.products.homepageFliter .item{width:100%;}
+.main-container{padding:20px 0 0px;}
+}
+
+
+@media (max-width:1199px){
+.filter-products .products div.item .product-image{min-height:0;}
+}
+@media screen and(-ms-high-contrast: active),(-ms-high-contrast: none){
+.rating-box{width:65px;height:12px;font-size:0;line-height:0;text-indent:-999em;overflow:hidden;position:relative;}
+.rating-box:before{font-family:"porto";content:"\e852\20\e852\20\e852\20\e852\20\e852";width:65px;height:12px;color:#ddd;display:inline;font-size:11px;line-height:12px;white-space:nowrap;}
+.rating-box .rating{float:left;height:12px;position:absolute;left:0;top:0;overflow:hidden;}
+.rating-box .rating:before{font-family:"porto";content:"\e852\20\e852\20\e852\20\e852\20\e852";width:65px;height:12px;color:#ffc600;display:inline;font-size:11px;line-height:12px;white-space:nowrap;}
+}
+@media (min-width: 320px) and (max-width:767px){
+.main-container{margin-top:190px;}
+}
+@media (max-width: 480px){
+.main-container{margin-top:150px;}
+}
+
+h2.filter-title.highlighted-title{margin-bottom:10px !important;color:#0088CC!important;background:none !important;border-bottom:1px solid #CCCCCC !important;line-height:30px !important;}
+.product-image-area{height:195px;}
+.filter-products .products div.item .product-image{height:100%;text-align:center;}
+.filter-products .products div.item .product-image img{width:auto;max-height:100%;}
+@media (max-width: 1200px){
+.product-image-area{height:220px;}
+}
+@media (max-width: 991px){
+.product-image-area{height:258px;}
+}
+@media (max-width: 570px){
+.product-image-area{height:210px;}
+}
+@media (max-width: 480px){
+.product-image-area{height:auto;}
+}
+@media (max-width: 768px){
+.page-container{display:block!important;}
+}
+
+h2.filter-title.highlighted-title strong {
+    background: none;
+    border: unset;
+    box-shadow: none;
+}
+h2.filter-title{display:block;}
+
+/*Featured Product*/
+div#featured_product .block.widget.block-products-list.grid ol.product-items.widget-product-grid li.product-item {
+    float: left;
+    width: 33.33%;    margin-left: 0;
+    min-height: 458px;
+    padding: 10px;
+}
+.filter-title strong {
+    background-color: unset;
+    box-shadow: unset;
+    border: unset;
+    font-weight: bold;
+    padding: 0px;
+    position: unset;
+}
+.block.widget.block-new-products.grid .block-title,.block.widget.block-products-list.grid .block-title {
+    display: none;
+}
+@media (max-width: 767px){.pay-banner-new {display: none !important;}}
+/*sub header*/
+
+@media all and (max-width:991px) and (min-width:768px){
+.subheader .items .item{margin:auto;float:left;}
+.subheader .items .item:nth-child(-n+3){width:33.33333333%;float:left;}
+.subheader .items .item.lastitem,.subheader .items .item:nth-child(n+4){width:50%!important;float:left;}
+}
+@media all and (max-width:480px){
+.nextdayd:before{width:25px!important;}
+.easyreturn:before{width:22px!important;}
+.offwarn:before{width:21px!important;}
+.subheader .items .item span{font-size:7px!important;}
+.subheader .items{width:auto!important;line-height:25px!important;}
+}
+.subheader{width:100%;background-color:#f5f5f5;}
+.subheader .items{max-width:1060px;margin:0 auto;line-height:45px;font-size:0;}
+.subheader .items .item{display:inline-block;width:20%;}
+.subheader .items .item.lastitem{width:20%;}
+.subheader .items .item span{font-size:13px;font-weight:bold;text-transform:uppercase;color:#464646;}
+.nextdayd:before{background:url("https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/ship.png") no-repeat;width:32px;height:16px;display:inline-block;content:"";vertical-align:middle;}
+.easyreturn:before{background:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/returnico.png') no-repeat;width:29px;height:24px;content:"";display:inline-block;vertical-align:middle;}
+.offwarn:before{background:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/offwarnt.png') no-repeat;width:29px;height:22px;content:"";display:inline-block;vertical-align:middle;}
+.warehouse:before{background:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/warehouse.png') no-repeat;width:28px;height:21px;content:"";display:inline-block;position:relative;vertical-align:middle;top:-3px;}
+@media (max-width: 480px){
+.subheader .items .item:nth-child(-n+3){width:33.33333333%;float:left;}
+.subheader .items .item.lastitem,.subheader .items .item:nth-child(n+4){width:100%!important;float:left;}
+.subheader .items .item span{white-space:nowrap;}
+}
+@media (min-width:481px) and (max-width: 768px){
+.subheader .items .item:nth-child(-n+3){width:33.33333333%;float:left;}
+.subheader .items .item.lastitem,.subheader .items .item:nth-child(n+4){width:50%!important;float:left;}
+.subheader .items .item span{font-size:11px;white-space:nowrap;}
+.nextdayd:before,.easyreturn:before,.offwarn:before,.warehouse:before{width:25px;}
+}
+@media (max-width: 321px){
+.subheader .items .item{width:auto!important;margin:auto;}
+}
+a.shopperlink img{width:auto!important;}
+@media (max-width: 767px){
+a.shopperlink{display:none!important;}
+}
+
+
+@media (max-width:900px){
+.subheader .items{width:100%;}
+}
+@media (min-width: 320px) and (max-width:767px){
+.subheader{display:none!important;}
+}
+
+.block.block-search {
+    margin-bottom: 0px;
+}
+
+/*8pm*/
+strong.product-item-name {
+    height: 110px;text-align: center;
+    margin: 0 0 3px 0;
+}
+.product-image-container span.product-image-wrapper {
+    width: 100%;
+    min-height: 60px;
+    display: block;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #fff;
+}
+[data-price-type="finalPrice"] {
+    min-width: 3.8em;
+    background: #FF0000;
+    color: #fff;
+    float: left;
+    height: 39px;
+    line-height: 39px;
+    font-weight: 700;
+    text-align: center;
+}
+/* [data-price-type="finalPrice"]:after {
+content: url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/aero.png);
+    height: 100%;
+    left: 100%;
+    top: 0;
+    width: 0.5em;
+    width: 9px;
+    height: 39px;
+    float: left;
+    border-top: solid 1px #d0d0d0;
+    border-bottom: solid 1px #d0d0d0;
+} */
+.product-item .price-box .price-label {
+    display: none;}
+    .sections.nav-sections {
+        margin-bottom: 0px !important;
+    }
+    .products-grid .product-item-info:hover,.products-grid .product-item-inner {box-shadow: unset;border: 0px solid #bbb;}
+    .product-item-inner {
+        display: none !important;
+    }
+    .product-item .price-box .price--inner-inner {
+        min-width: 3.8em;
+        background: #FF0000;
+        color: #fff;
+        float: left;
+        height: 41px;
+        line-height: 39px;
+        font-weight: 700;
+        text-align: center;
+    }
+    [data-price-type="finalPrice"] span.price {
+        font-size: 26px;
+    }
+    .payment-text-add {color: #08a79d;}
+    .price-box.price-final_price{text-align: center;}
+    .price--savings span.price--savings-value span.hidden-price {
+        display: none;
+    }
+    .price--savings {font-size: 13px !important;}
+    .price--rrp, .price--rrp span.price-wrapper span.price {font-size: 13px !important;
+        font-weight: 700;color: #000;}
+    .block.widget.block-new-products.grid .product-item-actions {
+        display: none;}
+    .products-grid .product-item-info:hover{
+        padding: 0px;margin: 0px;}
+        .product-item-name>a, .product.name a>a {font-size: 14px;color: #777;}
+    .product-item-name>a:hover, .product.name a>a:hover {
+        text-decoration: none;color: #777;}
+        [data-price-type="finalPrice"]:after {width: 0px !important;}
+        
+    /* @media (max-width:459px){
+    div#featured_product .block.widget.block-products-list.grid ol.product-items.widget-product-grid li.product-item {width: 105% !important;}}
+    @media (min-width: 460px) and (max-width: 599px){
+    div#featured_product .block.widget.block-products-list.grid ol.product-items.widget-product-grid li.product-item {width: 50% !important;}}
+    @media (min-width: 600px) and (max-width: 769px){
+    div#featured_product .block.widget.block-products-list.grid ol.product-items.widget-product-grid li.product-item {width: 33.33% !important;}} */
+/* Featured Prodt and Carousel */
+.products-grid .product-item-info:hover,.products-grid .product-item-inner {box-shadow: unset;border: 0px solid #bbb;}
+.product-item-inner {
+    display: none !important;
+}
+.product-item .price-box .price--inner-inner {
+    min-width: 3.8em;
+    background: #FF0000;
+    color: #fff;
+    float: left;
+    height: 39px;
+    line-height: 39px;
+    font-weight: 700;
+    text-align: center;
+}
+[data-price-type="finalPrice"] span.price {
+    font-size: 26px;
+}
+.payment-text-add {color: #08a79d;}
+.price-box.price-final_price{text-align: center;}
+.price--savings span.price--savings-value span.hidden-price {
+    display: none;
+}
+.price--savings {font-size: 13px !important;}
+.price--rrp, .price--rrp span.price-wrapper span.price {font-size: 13px !important;
+    font-weight: 700;color: #000;}
+.block.widget.block-new-products.grid .product-item-actions {
+    display: none;}
+.products-grid .product-item-info:hover{
+    padding: 0px;margin: 0px;}
+    .product-item-name>a, .product.name a>a {font-size: 14px;color: #777;}
+.product-item-name>a:hover, .product.name a>a:hover {
+    text-decoration: none;color: #777;}
+    [data-price-type="finalPrice"]:after {width: 0px !important;}
+    
+/* @media (max-width:459px){
+div#featured_product .block.widget.block-products-list.grid ol.product-items.widget-product-grid li.product-item {width: 105% !important;}}
+@media (min-width: 460px) and (max-width: 599px){
+div#featured_product .block.widget.block-products-list.grid ol.product-items.widget-product-grid li.product-item {width: 50% !important;}}
+@media (min-width: 600px) and (max-width: 769px){
+div#featured_product .block.widget.block-products-list.grid ol.product-items.widget-product-grid li.product-item {width: 33.33% !important;}} */
+
+.icon-ok:before {
+    content: '\e84e';
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "porto";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    /* font-size: 120%; */
+    /* text-shadow: 1px 1px 1px rgb(127 127 127 / 30%); */
+}
+.icon-right-dir:before {
+    content: '\e814';
+}
+.icon-location:before {
+    content: '\e826';
+}
+.icon-phone:before {
+    content: '\e80a';
+}
+.icon-mail:before {
+    content: '\e825';
+}
+.footer.content ul {
+    padding-right: 0px !important;
+}
+.owl-item .item.product-item {
+    width: 100% !important;
+}
+.carousel-wrap .owl-carousel {
+    display: block;
+}
+.carousel-wrap.products-grid.grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*.owl-item.active {*/
+/*    width: 232px !important;*/
+/*}*/
+.icon-profile-1:before {
+    font-family: icomoon !important;
+    content: "\e606";font-size: 20px;
+    color: #ffffff;
+}
+.minicart-wrapper .action.showcart:before{font-family: icomoon !important;
+    content: "\e686" !important;font-size: 19px !important;
+    color: #ffffff !important;}
+    
+ .icon-left-open:before {
+    content: '\e816';
+}
+.icon-right-open:before {
+    content: '\e817';
+}
+.owl-carousel .owl-controls .owl-nav div {
+    color: #08c !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 18px !important;
+}
+.owl-carousel .owl-controls .owl-dots {
+    display: none !important;
+}
+@media (min-width: 1200px) and (max-width: 2560px){
+main#maincontent {
+    width: 1170px;
+}}
+@media (min-width: 992px) and (max-width: 1199px){
+main#maincontent {
+    width: 970px;
+}}
+@media (min-width: 768px) and (max-width: 991px){
+main#maincontent {
+    width: 750px;
+}}
+@media (min-width: 320px) and (max-width: 767px){
+    .home-right-part .hometop-left-part .hometopimgs .imageitem a img {
+        max-width: 141px;
+    }
+.footer-middle ul.links li{display: flex !important;}
+.footer.content .links a {padding: 0px 0;}
+	.owl-top-narrow .owl-controls{right: 33px;}
+	.nav-toggle::after {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    padding-top: 5px;
+    content: "MENU";
+}
+}
+.imageitem span.left-block-text-small {
+    display: block;
+}
+.top-container.container.zippybanner {
+    padding: 0px;
+    text-align: center;
+}
+.container {
+    padding-left: 10px !important;
+    padding-right: 20px !important;
+}
+.hometop-left-part.right-part-icon {
+    /* margin-left: 41px; */
+    margin-top: 2.7%;padding-right: 9px;}
+.footer-middle .container .row {
+    margin-left: -10px;
+    margin-right: -20px;
+}
+.block.widget.block-new-products.grid {
+    margin: 0px;
+}
+.column.main {
+    padding-bottom: 5px !important;
+}
+.footer-bottom .container{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* VENUS MENU */
+@media (min-width: 768px){
+    .ves-megamenu li.level0:hover>a {text-transform: uppercase !important;font-family: "Open Sans" !important;font-size: 14px !important;transition: all 0.3s;color: #ffffff;text-decoration: underline !important;background: unset !important;text-decoration-color: #3caca5 !important;}
+     nav.navigation {width: 1170px  !important;margin-right: auto !important;
+        margin-left: auto;padding-left: 17px;padding-right: 15px !important;}
+    .ves-megamenu li.level0>a {position: relative;line-height: 24px !important;float: left !important;color: #ffffff !important;font-weight: 400 !important;text-transform: uppercase !important;font-family: "Open Sans";font-size: 14px !important;}
+    .ves-megamenu {background: unset !important;}
+    .ves-megamenu .row {display: list-item !important;margin: 10px 0 !important;border-bottom: 1px solid #0dc2a9 !important;padding-bottom: 10px !important;}
+    .ves-megamenu.menu-hover .dropdown:hover>.dropdown-menu {background-color: #05b59d !important;left: -8px !important;margin-left: -20px !important;position: absolute !important;top: 25px !important;min-width: 150px !important;z-index: 10000 !important;padding: 10px 0 !important;width: 150px !important;}
+    .navigation .level0 .submenu a span {font-size: 14px !important;color: #ffffff !important;}
+    .navigation .level0 .submenu a{padding: 0px !important;}
+    .ves-megamenu .dropdown.submenu-left, .ves-megamenu .dropdown.submenu-right {
+        position: relative !important;}
+    .navigation li.level0 {height: 29px !important;}
+    .block-search .action.search:before {font-size: 22px !important;font-weight: bold !important;}
+    input#search::placeholder {color: #777777 !important;}
+    .pay-banner-new {margin-bottom: 30px !important;padding-left: 12px;}
+    .subheader .items .item.lastitem{text-align: center !important;}
+    .navigation .level0 .submenu a:hover {background: unset !important;}
+    }
+    @media (max-width: 767px){.footer-bottom a.logo {max-width: 100% !important;}
+    .nav-mobile li.level0>a {
+        background-color: transparent !important;
+        color: #777 !important;
+        border-color: #ddd !important;
+        padding: 0 15px !important;
+    }
+    div#store\.menu .fordesc,div#store\.menu .minicart-wrapper{display:none;}
+    .navigation li.level0 {height: auto !important;}
+    }
+    
+    [aria-controls="store.links"], [aria-controls="store.settings"] {
+        display: none !important;
+    }
+
+/* 18-05-2021 */
+.block-search .action.search:before {display:none !important;}
+i.fa.fa-search {position: absolute;top: 6px;color: #777;font-size: 22px;left: -6px;}
+.block-search .action.search {opacity:1 !important;}
+
+/*Mobile Block*/
+.i-amphtml-element{display:inline-block;}
+.i-amphtml-layout-responsive{display:block;position:relative;}
+.i-amphtml-layout-fixed-height{display:block;position:relative;}
+.i-amphtml-layout-size-defined{overflow:hidden!important;}
+i-amphtml-sizer{display:block!important;}
+.i-amphtml-fill-content{display:block;height:0;max-height:100%;max-width:100%;min-height:100%;min-width:100%;width:0;margin:auto;}
+.i-amphtml-layout-size-defined .i-amphtml-fill-content{position:absolute;top:0;left:0;bottom:0;right:0;}
+.i-amphtml-replaced-content{padding:0!important;border:none!important;}
+.amp-carousel-button{position:absolute;box-sizing:border-box;top:50%;height:34px;width:34px;border-radius:2px;opacity:0;pointer-events:all;background-color:rgba(0,0,0,0.5);background-position:50% 50%;background-repeat:no-repeat;transform:translateY(-50%);visibility:hidden;z-index:10;}
+.amp-carousel-button:focus{border:1px solid #000;outline:1px solid #fff;}
+.amp-mode-mouse .amp-carousel-button,a.mp-carousel.i-amphtml-carousel-has-controls .amp-carousel-button,amp-carousel[controls] .amp-carousel-button{opacity:1;visibility:visible;}
+.amp-carousel .amp-carousel-button.amp-disabled{animation:none;clip:rect(0 0 0 0);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px;}
+.amp-carousel-button-prev{left:16px;background-image:url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23fff'%3E%3Cpath d='M15 8.25H5.87l4.19-4.19L9 3 3 9l6 6 1.06-1.06-4.19-4.19H15v-1.5z'/%3E%3C/svg%3E);background-size:18px 18px;}
+amp-carousel-button-next{right:16px;background-image:url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23fff'%3E%3Cpath d='M9 3 7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z'/%3E%3C/svg%3E);background-size:18px 18px;} 
+.amp-scrollable-carousel-slide{display:inline-block!important;margin-left:8px;}
+.amp-scrollable-carousel-slide:first-child{margin-left:0px;}
+.i-amphtml-scrollable-carousel-container{white-space:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important;}
+@media (max-width:770px){
+.tvcontainer h2.filter-title{text-transform:uppercase;}
+}
+
+div.filter-products .item{max-width:100%;}
+.bw-home-img-box{padding:10px 0;}
+.bw-home-img-box:after{clear:both;display:block;content:"";}
+.bw-home-img-box a{float:left;width:50%;display:inline-block;margin-bottom:10px;padding:0 5px;box-sizing:border-box;}
+.bw-home-img{width:100%;display:inline-block;}
+.filter-products div.item .item-area{width:100%;position:relative;}
+.filter-products div.item .product-image{width:100%;min-height:60px;display:block;position:relative;z-index:0;overflow:hidden;border-radius:3px;background:#fff;}
+.filter-products div.item .product-image img{width:100%;transition:opacity 0.3s;}
+.filter-products div.item .details-area{padding:10px;text-align:center;}
+.filter-products div.item .details-area .product-name{margin:0 0 3px 0;white-space:normal;}
+.filter-products div.item .details-area .product-name a{font-size:14px;}
+.filter-products .item{text-align:center;vertical-align:top;max-width:290px;}
+.shipps-text-add{font-size:14px;padding-top:3px;color:#FF0000;line-height:20px;}
+.product-name{margin:0;line-height:18px;font-weight:400;color:#777;}
+.product-name a{color:#777;}
+.price--rrp{line-height:23px;font-size:13px;font-weight:700;color:#000;}
+/*.price--sell-price{border:1px solid #d0d0d0;max-width:110px;margin:auto;clear:both;}*/
+
+.price--inner-inner{min-width:70px;background:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/plumrocket/pramp/aero.png') right top no-repeat;font-size:17px;color:#fff;float:left;height:40px;line-height:29px;font-weight:700;text-align:center;}
+.price--inner-inner span{vertical-align:super;font-size:11px;}
+.price--savings{color:#000;font-size:10px;font-weight:700;height:41px;padding-top:6px;line-height:12px;}
+.price--savings span{display:block;}
+.payment-text-add{float:left;font-size:14px;padding:0;width:100%;text-align:center;}
+.filter-products div.item .actions{display:none;}
+@media (max-width:767px){
+    /* body.cms-porto_home_4_bwo main#maincontent {
+    display: none;} */
+    body.cms-porto_home_4_bwo main#maincontent .container {
+        display: none;
+    }
+    .page-wrapper .widget.block.block-static-block {padding: 30px;}}
+@media (min-width:768px){.std{display:none;}}
+
+@media (max-width: 640px){.page-wrapper .widget.block.block-static-block {padding: 10px 15px !important;}
+.page-wrapper .footer.content .widget.block.block-static-block {
+    padding: 0px !important;
+}}
+.page-wrapper .widget.block.block-static-block {max-width: 100%;padding: 0px;}
+a.shopperlink img {margin-top: 5px;}
+
+
+/*Social Icons*/
+.social-icons{right:0;position:fixed;top:270px;width:45px;z-index:999;}
+.social-icon{background-color:#33353B;background-image:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/social-icons.png');}
+#facebook-btn .social-icon{background-color:#3B5998;}
+#youtube-btn .social-icon{background-color:#D72222;}
+#instagram-btn .social-icon{background-position:0 0;background-image:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/instagram-bg.jpg);background-repeat:repeat-x;}
+#facebook-btn span{background-position:12px 7px;}
+#youtube-btn span{background-position:10px -226px;}
+#instagram-btn span.social-text{background-position:10px -300px;}
+#instagram-btn span.social-text{margin:-11px 0 11px 44px;}
+#instagram-btn .social-icon:before{content:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/social_icon_insta.png);display:block;float:left;position:relative;left:10px;top:9px;}
+.social-icon{transition:background-color 0.4s ease-in 0s;-webkit-transition:background-color 0.4s ease-in 0s;background-repeat:no-repeat;display:block;float:right;height:43px;margin-bottom:2px;width:43px;}
+.social-icons a:hover{text-decoration:none;}
+#facebook-btn:hover .social-icon{background-color:#3B5998;}
+#youtube-btn:hover .social-icon{background-color:#D72222;}
+#instagram-btn:hover .social-icon{background-image:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/instagram-bg.jpg') x-reapt;}
+#youtube-btn:hover .social-text{color:#fff;}
+#instagram-btn:hover .social-text{color:#fff;}
+.social-text{float:left;font-size:11px;font-weight:bold;margin:14px 0 11px 44px;white-space:nowrap;color:#FFFFFF;font-family:Arial;}
+.social-icons a:first-child{margin:0;}
+@media (max-width: 767px){
+.social-icons{display:none;}
+}
+span.social-icon:hover {
+    width: 160px !important;
+    transition: width .5s;
+}
+/*Sub Header*/
+@media all and (max-width:991px) and (min-width:768px){
+.subheader .items .item{margin:auto;float:left;}
+.subheader .items .item:nth-child(-n+3){width:33.33333333%;float:left;}
+.subheader .items .item.lastitem,.subheader .items .item:nth-child(n+4){width:50%!important;float:left;}
+}
+@media all and (max-width:480px){
+.nextdayd:before{width:25px!important;}
+.easyreturn:before{width:22px!important;}
+.offwarn:before{width:21px!important;}
+.subheader .items .item span{font-size:7px!important;}
+.subheader .items{width:auto!important;line-height:25px!important;}
+}
+.subheader{width:100%;background-color:#f5f5f5;}
+.subheader .items{max-width:1060px;margin:0 auto;line-height:45px;font-size:0;}
+.subheader .items .item{display:inline-block;width:20%;}
+.subheader .items .item.lastitem{width:20%;}
+.subheader .items .item span{font-size:13px;font-weight:bold;text-transform:uppercase;color:#464646;}
+.nextdayd:before{background:url("https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/ship.png") no-repeat;width:32px;height:16px;display:inline-block;content:"";vertical-align:middle;}
+.easyreturn:before{background:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/returnico.png') no-repeat;width:29px;height:24px;content:"";display:inline-block;vertical-align:middle;}
+.offwarn:before{background:url('https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/offwarnt.png') no-repeat;width:29px;height:22px;content:"";display:inline-block;vertical-align:middle;}
+.warehouse:before{background:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/warehouse.png) no-repeat;width:28px;height:21px;content:"";display:inline-block;position:relative;vertical-align:middle;top:-3px;}
+@media (max-width: 480px){
+.subheader .items .item:nth-child(-n+3){width:33.33333333%;float:left;}
+.subheader .items .item.lastitem,.subheader .items .item:nth-child(n+4){width:100%!important;float:left;}
+.subheader .items .item span{white-space:nowrap;}
+}
+@media (min-width:481px) and (max-width: 768px){
+.subheader .items .item:nth-child(-n+3){width:33.33333333%;float:left;}
+.subheader .items .item.lastitem,.subheader .items .item:nth-child(n+4){width:50%!important;float:left;}
+.subheader .items .item span{font-size:11px;white-space:nowrap;}
+.nextdayd:before,.easyreturn:before,.offwarn:before,.warehouse:before{width:25px;}
+}
+@media (max-width: 321px){
+.subheader .items .item{width:auto!important;margin:auto;}
+}
+a.shopperlink img{width:auto!important;}
+@media (max-width: 767px){
+a.shopperlink{display:none!important;}
+}
+
+@media (max-width:900px){
+.subheader .items{width:100%;}
+}
+@media (min-width: 320px) and (max-width:767px){
+.subheader{display:none!important;}
+}
+
+/*Minicart*/
+.block-minicart .block-content>.actions .paypal-logo {display:none;}
+.minicart-items .product-item-name a {color: #777 !important;}
+.minicart-items .product-item-name {margin: 10px 0;font-size: 1em;text-align: left;}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+.block-minicart .block-content>.actions {
+    color: #fff;
+    line-height: 47px;
+    padding: 0px;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+}
+a.btn.btn-default.action.viewcart,button#top-cart-btn-checkout {
+    color: #fff;
+    font-weight: 400;
+    background-color: #08b484;margin-right: 5px;
+    text-shadow: none;width: 128px;border: unset;
+}
+.block-minicart .amount .price-wrapper:first-child .price {
+    text-align: center;
+    font-size: 18px;
+    color: #08a79d;
+    font-weight: 700;}
+    .amount.price-container {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #08a79d;
+    font-weight: 700;
+}
+.block-minicart .subtotal span.label {
+    display: none;
+}
+.amount.price-container span.price-wrapper:before {
+    content: "Total: ";
+    color: #777 !important;
+}
+.amount.price-container {
+    text-align: center;margin-top: 10px;
+}
+.block-minicart .items-total {
+    display: none;}
+    .block-minicart .product-image-container {
+    width: 80px !important;}
+    /* .minicart-wrapper .product .actions{display: none;} */
+.minicart-wrapper .block-minicart {
+    width: 300px !important;
+}
+.minicart-wrapper.active .block-minicart {
+    border-color: #08a79d;
+    display: block !important;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 300px;
+    background-color: #fff;
+    border-width: 6px 0 0 0;
+    border-style: solid;
+    z-index: 1;
+    border-radius: 8px 8px 5px 5px;
+    color: #777;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 50%);
+    margin-top: 10px;
+    display: block;
+}
+minicart:before, .minicart-wrapper .block-minicart:after {
+    border: 10px solid transparent !important;
+    right: 15px !important;
+    top: -25px !important;
+    border-bottom-color: #08a79d !important;}
+    .minicart-items .product-item-pricing .label {
+    display: none;
+}
+.minicart-wrapper .block-minicart:before {
+    display: none !important;
+}
+.minicart-wrapper .action.showcart .counter.qty {
+    display: none;
+}
+/*Product Page*/
+body.catalog-product-view main#maincontent .columns {display: flex;}
+body.catalog-product-view main#maincontent .columns .column.main {width: 75%;}
+body.catalog-product-view main#maincontent .columns .col-sm-3 {order: 2;}
+body.catalog-product-view  .product-info-main .page-title-wrapper.product h1.page-title {margin: 15px 0;font-size: 22px;font-weight: 600;line-height: 1;color: #555;}
+body.catalog-product-view  .product-info-main {width: 58.33333333%;padding-left: 15px;padding-right: 15px;}
+body.catalog-product-view  .product.media {width: 41.66666667%;padding-left: 15px;padding-right: 15px;}
+body.catalog-product-view  .product-info-main .product-info-main .product-info-stock-sku,body.catalog-product-view  .product-info-main .product-add-form .box-tocart .field.qty,body.catalog-product-view  .product-info-main .product-info-price .price-box .ratings,body.catalog-product-view  .product-info-main .product-info-price .price-box .price--container .shipps-text-add,body.catalog-product-view .product-info-main .product-info-price .price-box .price-container span.price-label,.product-info-main .product-info-price .price-box .price--container .payment-text-add,body.catalog-product-view .product-info-main .product-social-links,body.catalog-product-view .product-info-main .product-info-price .product-info-stock-sku {display: none;}
+body.catalog-product-view  .product-info-main .product-info-price {border-bottom: unset;}
+body.catalog-product-view .product-info-main .product-add-form .box-tocart .fieldset .actions button#product-addtocart-button {
+    height: 40px;width: 30%;
+    line-height: 39px;
+    font-size: 16px;
+    border-radius: 3px;
+    padding: 0px;
+    min-width: 110px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgb(40, 165, 40);
+    border: unset;
+}
+body.catalog-product-view .product-info-main .product-info-price .price-box .price-container .price {font-size: 26px;line-height: 39px;}
+body.catalog-product-view .product-info-main .price--savings {font-weight: 600 !important;}
+body.catalog-product-view .page-wrapper>.breadcrumbs {
+    display: none;
+}
+body.catalog-product-view .product-info-main .product-add-form .combined-text .availability {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #777;
+    font-weight: 600;
+}
+body.catalog-product-view main#maincontent .columns .col-sm-3.sidebar .custom-block-1>div {
+    text-align: left;}
+    @media (min-width: 768px){
+#g-shock-mobile, #baby-mobile {
+    display: none;}
+}
+/* body.catalog-product-view .product-info-main .product-reviews-summary{display:none;} */
+body.catalog-product-view .product-info-main .product-info-price .price-box .price-container .price {font-weight: 700;}
+body.catalog-product-view .price--rrp {text-align: left;}
+@media (max-width: 767px){
+body.catalog-product-view .product-info-main,body.catalog-product-view .product.media {
+    width: 100% !important;}
+	
+body.catalog-product-view .class-example {
+    display: grid;
+}
+body.catalog-product-view .product-info-main {
+    order: 2;
+}
+body.catalog-product-view .product.media {
+    order: 1;
+}
+body.catalog-product-view .product.info.detailed {
+    order: 3;}
+    body.catalog-product-view main#maincontent .columns .col-sm-3 {
+    width: 100%;}
+}
+/*Below Product Img Social Icon*/
+.product-img-box img{width:100%;}
+#g-shock-desktop{display:block;}
+@media (max-width: 769px){
+#g-shock-desktop{display:none;}
+}
+#brand-wacth .more-casio{color:#08a79d;font-weight:bold;margin-bottom:5px;margin-top:10px;}
+#brand-wacth a{color:#555;}
+#brand-wacth{text-align:center;margin-top:10px;}
+#brand-wacth img{width:50%;}
+#brand-wacth a:hover img{opacity:0.65;}
+#list-social img{width:auto;}
+#list-social{display:block;text-align:center;}
+#list-social img{width:auto;}
+#list-social{display:block;text-align:center;}
+#list-social img{height:auto;width:35px;}
+#list-social img.last-social{margin-top:4px;}
+
+/*Combined Text*/
+.notice{color:#e26703;}
+.availability{margin:0;}
+.product-view .product-shop .availability{font-size:11px;}
+.product-view .product-shop .availability{margin:0 0 10px 0;font-size:14px;color:#777;font-weight:600;}
+.notice.leattimes{color:#08a79d;margin:0 0 10px;font-weight:600;font-size:14px;}
+
+/*Rearrange*/
+body.catalog-product-view .product-info-main {display: grid;}
+body.catalog-product-view .product-info-main .product-info-price {order: 3;}
+body.catalog-product-view .product-info-main .product-add-form {order: 4;}
+body.catalog-product-view .product-info-main .product.attribute.overview {order: 2;}
+
+body.catalog-product-view .product-info-main .product.attribute.overview {
+    padding: 5px 0 20px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0px !important;
+}
+/*Product Page Sidebar*/
+.owl-carousel .owl-wrapper:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+.owl-carousel{display:none;position:relative;width:100%;-ms-touch-action:pan-y;}
+.owl-carousel .owl-wrapper{display:none;position:relative;-webkit-transform:translate3d(0px, 0px, 0px);}
+.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%;}
+.owl-carousel .owl-item{float:left;}
+.owl-controls .owl-page{cursor:pointer;}
+.owl-controls{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.owl-carousel  .owl-wrapper,.owl-carousel  .owl-item{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);}
+.owl-theme .owl-controls{margin-top:10px;text-align:center;}
+.owl-theme .owl-controls .owl-page{display:inline-block;zoom:1;*display:inline;}
+.owl-theme .owl-controls .owl-page span{display:block;width:12px;height:12px;margin:5px 7px;filter:Alpha(Opacity=50);opacity:0.5;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;background:#869791;}
+.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span{filter:Alpha(Opacity=100);opacity:1;}
+.owl-carousel .owl-wrapper:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+.owl-carousel{display:none;position:relative;width:100%;-ms-touch-action:pan-y;}
+.owl-carousel .owl-wrapper{display:none;position:relative;-webkit-transform:translate3d(0px, 0px, 0px);}
+.owl-carousel .owl-wrapper-outer{overflow:hidden;position:relative;width:100%;}
+.owl-carousel .owl-item{float:left;}
+.owl-controls .owl-page{cursor:pointer;}
+.owl-controls{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.owl-carousel  .owl-wrapper,.owl-carousel  .owl-item{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);}
+.owl-carousel .owl-wrapper-outer{cursor:move;cursor:-webkit-grab;cursor:-moz-grab;}
+.partner-banner{text-align:center;}
+.partner-banner_img{max-width:100%;}
+.owl-theme .owl-controls .owl-page span{width:8px;height:8px;background:#a0a09f;opacity:1;filter:Alpha(Opacity=100);}
+.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span{background:#08c;}
+.sidebar .custom-block{margin-bottom:30px;padding-bottom:40px;background:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/bkg_4.png) bottom no-repeat;}
+.sidebar .custom-block.custom-block-1{padding-bottom:20px;}
+.col-right.sidebar.col-sm-3 .partner-banner{margin-left:50px;background:url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/bkg_4.png) bottom no-repeat;padding-bottom:20px;margin-bottom:20px;}
+.sidebar .custom-block-1>div{min-height:50px;margin-bottom:20px;clear:both;}
+.sidebar .custom-block-1>div i{font-size:34px;color:#000;float:left;}
+.sidebar .custom-block-1>div h3{color:#313131;font-size:16px;margin:0;line-height:1.5;margin-left:50px;}
+.sidebar .custom-block-1>div p{font-size:12px;margin:0;margin-left:50px;line-height:1;}
+.owl-item .item{max-width:100%;float:none!important;text-align:center;}
+.owl-item .item img{max-width:100%;}
+@media all and (max-width:767px) and (min-width:481px){
+.sidebar.col-sm-3 .partner-banner{display:none;}
+}
+@media all and (max-width:480px){
+.sidebar.col-sm-3 .partner-banner{display:none;}
+}
+
+@media (min-width:768px){
+.col2-right-layout .col-right.sidebar{padding-left:12px;}
+}
+.icn-delivery,.icn-receive-cash,.icn-refresh-shield{display:block;width:50px;height:52px;}
+.icn-delivery{background-position:0 0;}
+.icn-receive-cash{background-position:0 -127px;}
+.icn-refresh-shield{background-position:0 -51px;}
+.owl-item .item{position:relative;}
+.item img{width:100%;height:auto;}
+.col-sm-3{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+@media (min-width: 768px){
+.col-sm-3{float:left;}
+.col-sm-3{width:25%;}
+}
+
+/*Product Page Product Tab*/
+
+.product.data.items>.item.title.active>.switch {
+    background-color: #08b484 !important;
+    border-top-color: #08b484 !important;
+    color: #ffffff !important;
+}
+.product.data.items>.item.title>.switch {
+    padding: 10px 15px;
+    color: #08a79d !important;
+    font-size: 14px;
+    line-height: 1;
+    border: 1px solid #eee;
+    border-width: 3px 1px 0 1px;
+    border-radius: 5px 5px 0 0;
+    margin-right: 1px;
+}
+.product.data.items>.item.title>.switch:hover {
+    text-decoration: underline !important;
+}
+.product.data.items>.item.title.active>.switch, .product.data.items>.item.title.active>.switch:focus, .product.data.items>.item.title.active>.switch:hover,.product.data.items>.item.title:not(.disabled)>.switch:focus, .product.data.items>.item.title:not(.disabled)>.switch:hover {
+    outline: none;
+}
+li.splide__slide.product-slider.item.product-item {
+    margin-left: 0px !important;
+    padding: 10px;
+}
+.splide__arrows {
+    position: absolute;
+    right: 2%;
+    top: -5%;
+}
+button.splide__arrow.splide__arrow--next {
+    right: unset !important;
+    left: 5px;
+}
+button.splide__arrow.splide__arrow--prev {
+    left: unset !important;
+    right: 5px;
+}
+button.splide__arrow {
+    background: unset;
+}
+button.splide__arrow svg {
+    display: none;
+}
+button.splide__arrow {
+    clear: both !important;
+    border: solid #0c73c1;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 4px;
+    border-radius: unset;
+    font-size: 4px !important;
+}
+button.splide__arrow.splide__arrow--next {
+    transform: rotate(
+-45deg
+) !important;
+    -webkit-transform: rotate(
+-45deg
+) !important;
+}
+button.splide__arrow.splide__arrow--prev {
+    transform: rotate(
+135deg
+);
+    -webkit-transform: rotate(
+135deg
+);
+}
+.product-reviews-summary .reviews-actions {
+    display: none !important;
+}
+.catalog-product-view .product-reviews-summary .reviews-actions {
+    display: block !important;
+    float: left;
+    margin: 0px;
+}
+.catalog-product-view .product-reviews-summary .rating-summary {
+    float: left;
+    margin-right: 0px;
+}
+.catalog-product-view .rating-summary .rating-result:before {
+    font-size: 13px !important;
+}
+.catalog-product-view .rating-summary .rating-result>span:before {
+    font-size: 13px !important;
+}
+.catalog-product-view .product-reviews-summary .reviews-actions a {
+    line-height: 20px;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.product-reviews-summary .reviews-actions a:not(:last-child) {
+    margin: 0px !important;
+}
+.catalog-product-view .product-reviews-summary .reviews-actions a.action.add:before {
+    content: '';
+    padding-left: 10px;
+    text-decoration: none;
+    border-left: 1px solid #bdbdbd;
+    font-size: 10px;
+}
+.product-reviews-summary {
+    font-size: 11px;
+    line-height: 1.25;
+    margin: 3px 0;
+    background: url(https://www.buywatchesonline.com.au/skin/frontend/smartwave/portowatchau/images/rating-bar.png) center no-repeat;
+    height: 14px;
+    text-align: center;
+}
+.rating-summary .rating-result>span:before {
+    font-size: 11px !important;
+    color: #f9c647 !important;
+}
+.rating-summary .rating-result:before {
+    font-size: 11px !important;
+}
+ul.splide__pagination {
+    display: none !important;
+}
+li img.product-image-photo {
+    width: 157px;
+}
+div#featured_product li img.product-image-photo {
+    width: 189px;
+}
+li img.product-image-photo {
+    width: 157px;
+}
+@media (max-width: 767px){
+    #featured_product {
+        float: unset;
+        width: 100%;
+    }
+    div#new_product {
+        width: 100%;
+    }
+    li .product-item-info {
+        text-align: center;
+    }
+    .section-item-title.nav-sections-item-title {
+        display: none !important;
+    }
+    .sections.nav-sections {
+        background-color: #f8f8f8 !important;
+    }
+    .nav-sections-item-content {
+        margin-top: -7% !important;
+        text-align: left !important;
+    }
+}
+ol#mini-cart .product-item-pricing .price-container {
+    float: left;
+    display: none;
+}
+ol#mini-cart .product-item-pricing .price-container span {
+    font-size: 13px;
+}
+ol#mini-cart .details-qty.qty {
+    float: left;
+    margin-top: 0px !important;
+}
+ol#mini-cart .details-qty.qty span {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 1px !important;
+    color: #08a79d;
+    float: left;
+}
+div#minicart-content-wrapper button#btn-minicart-close {
+    display: none;
+}
+div#minicart-content-wrapper .block.block-minicart.ui-dialog-content.ui-widget-content {
+    margin: 0px;
+    padding: 0px 16px 10px;
+}
+div#minicart-content-wrapper .product-item-details strong.product-item-name {
+    height: unset;
+    margin-right: 15px;
+}
+div#minicart-content-wrapper .minicart-items-wrapper {
+    height: unset !important;
+    border: 0px;
+}
+div#minicart-content-wrapper div#minicart-widgets {
+    display: none;
+}
+div#minicart-content-wrapper .block-minicart .subtotal {
+    margin: 0px;
+}
+div#minicart-content-wrapper .product.actions .primary {
+    display: none !important;
+}
+div#minicart-content-wrapper .product.actions .secondary {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+}
+div#minicart-content-wrapper .minicart-items .action.delete:before {
+    content: '\e616' !important;
+    font-size: 10px !important;
+    font-weight: 900 !important;
+}
+div#minicart-content-wrapper .block.block-minicart.ui-dialog-content.ui-widget-content {
+    padding: 0 20px !important;
+}
+div#minicart-content-wrapper .block-minicart .block-content>.actions {
+    margin: 0 0 10px !important;
+}
+div#minicart-content-wrapper ol#mini-cart li.item.product {
+    border-bottom: 1px solid #eee;
+}
+.minicart-wrapper.active .block-minicart {
+    padding: 0 20px !important;
+    margin: 0px !important;
+}
+.block-minicart .block-content>.actions {
+    margin: 0 0 10px !important;
+}
+.block-minicart .subtotal {
+    margin: 0 !important;
+}
+/* 31-05-2021 Upgrade */
+/* 31may 2021 */
+.fotorama__nav__frame.fotorama__nav__frame--thumb.fotorama__active div {
+    background: transparent !important;
+}
+.fotorama__thumb-border {
+    border: unset !important;
+}
+/* 31may 2021 */

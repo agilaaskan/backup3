@@ -1,0 +1,41 @@
+<?php 
+
+    $productId = $block->getProduct()->getId(); 
+    $cat_ids = $block->getProduct()->getCategoryIds();
+
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+    $product = $objectManager->create('Magento\Catalog\Model\Product');
+    $productt = $objectManager->create('Magento\Catalog\Model\Product');
+
+    $category = $objectManager->create('Magento\Catalog\Model\Category')->load($cat_ids[0]);
+    // print_r($category->getUrl());
+    $category_product = $category->getProductCollection()->addAttributeToSort('position', 'asc');
+    $category_product->addAttributeToFilter('status',1);
+    $category_product->addAttributeToFilter('visibility',4);
+
+    $cat_prod_ids = $category_product->getAllIds();
+
+    $_pos = array_search($productId, $cat_prod_ids); // get position of current product
+    $_next_pos = $_pos+1;
+    $_prev_pos = $_pos-1;
+    $keys = array_keys($cat_prod_ids);
+
+    if(in_array($_next_pos, $keys)){
+        $_next_prod = $product->load($cat_prod_ids[$_next_pos]);
+    }
+    if(in_array($_prev_pos, $keys)){
+        $_prev_prod = $productt->load($cat_prod_ids[$_prev_pos]);   
+    }
+
+?>
+
+<div class="previous_next check">
+    <?php if(in_array($_prev_pos, $keys)): ?>
+        <a href="<?php print_r($_prev_prod->getProductUrl()); ?>"><span><i class="icon-left"></i>Prev </span></a>
+    <?php endif; ?>
+
+    <?php if(in_array($_next_pos, $keys)): ?>
+        <a href="<?php print_r($_next_prod->getProductUrl()); ?>"><span>Next<i class="icon-right"></i> </span></a>
+    <?php endif; ?>
+</div> 

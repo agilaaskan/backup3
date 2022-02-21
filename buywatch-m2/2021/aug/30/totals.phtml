@@ -1,0 +1,58 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/**
+ * Shopping cart totals template
+ * @var $block \Magento\Checkout\Block\Cart\Totals
+ */
+?>
+<div id="cart-totals" class="cart-totals" data-bind="scope:'block-totals'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+            {
+                "#cart-totals": {
+                    "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+                }
+            }
+    </script>
+
+    <?php 
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $cart = $objectManager->get('\Magento\Checkout\Model\Cart'); 
+    
+    // get quote items collection
+    $itemsCollection = $cart->getQuote()->getItemsCollection();
+    
+    // get array of all items what can be display directly
+    $itemsVisible = $cart->getQuote()->getAllVisibleItems();
+    
+    // get quote items array
+    $items = $cart->getQuote()->getAllItems();
+    $neww2 = 0;
+    foreach($items as $item) {
+        $pid = $item->getProductId().'<br />';
+        $productCollection = $objectManager->create('Magento\Catalog\Model\Product')->load($pid);
+        $_price = round($productCollection->getPrice());
+        $_finalPrice = round($productCollection->getFinalPrice());   
+        if($_finalPrice < $_price){
+            $neww = ($_price - $_finalPrice);
+        }
+        $neww2 = ($neww2 + $neww);
+    }
+    ?>
+    <table class="special-cart">
+    <tr style="border-top:1px solid #dcdcdc;">
+        <td style="font-size:15px;" class="a-right" colspan="1">
+            <strong style="color:red; font-weight:600;">Congratulations <p class="youhaveasved">You've Saved</p></strong>
+        </td>
+        <td style="font-size:17px;" class="a-right">
+            <strong><span class="price"  style="color:red;font-size:17px;"><?php echo "$".$neww2; ?></span></strong>
+        </td>
+    </tr>  
+</table> 
+
+</div>

@@ -1,0 +1,46 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+?>
+<?php
+/** @var $block \Magento\Checkout\Block\Cart */
+?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+$baseUrl = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
+?>
+<?php if (!$block->hasError()) :?>
+    <?php $methods = $block->getMethods('methods') ?: $block->getMethods('top_methods') ?>
+    <ul class="checkout methods items checkout-methods-items">
+        <?php foreach ($methods as $method) :?>
+            <?php $methodHtml = $block->getMethodHtml($method); ?>
+            <?php if (trim($methodHtml) !== '') :?>
+                <li class="item"><?= /* @noEscape */ $methodHtml ?></li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        <li class="payment_2"><span class="paypal-or">-OR-</span></li>
+            <li class="method-afterpay_onetouch">
+
+                <h3>Check out with Afterpay and pay over time.</h3>
+                <p>Simply pay 4 fornightly payments of $49.75.</p>
+                <p>Use your payment card, instant approval.<a href="#afterpay-what-is-modal" class="afterpay-what-is-modal-trigger">Learn more</a></p>
+            </li>
+            <li class="payment_4">
+                <div class="widget-product-calc zipmoney-product-tagline"> 
+                    <span data-zm-widget="tagline" data-zm-info="true" class="zip-widget__wrapper zip-widget__wrapper--display-tagline">
+                        <div class="zip-widget zip-widget__tagline" title="Zip now, Pay later">
+                            <span class="text">own it from $10/wk</span>
+                            <img class="logo" alt="Zip Payment" src="https://zip.co/static/assets/default/product-widget/img/zip-button-wht.svg">
+                            <button class="zip-info-link" id="zip-info-link" title="Zip payment Information">
+                                <span class="zip-learn-more">ⓘ</span>
+                            </button>
+                        </div>
+                    </span> 
+                </div>
+            </li>
+    </ul>
+<?php endif; ?>

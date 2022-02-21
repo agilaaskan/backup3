@@ -1,0 +1,12 @@
+<?php
+$tbAdRollActive = $block->getTbAdRollAcctive();
+if($tbAdRollActive == 1){
+?>
+<script type="text/javascript">
+    adroll_conversion_value = <?php echo $block->getConversionValueInDollars() ?>;
+    adroll_currency = "USD";
+    adroll_custom_data = {"ORDER_ID": "<?php echo $block->getOrderId() ?>"};
+</script>
+<?php
+}
+?>

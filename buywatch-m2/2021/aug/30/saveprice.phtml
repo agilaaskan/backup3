@@ -1,0 +1,71 @@
+<?php 
+if(Mage::registry('current_product')){
+$_product = Mage::registry('current_product');
+$_finalPrice=$_product->getFinalPrice(); 
+$_price=$_product->getPrice();?>
+<?php if($_finalPrice < $_price): ?>
+<?php $_savingPercent = round($_price - $_finalPrice); ?>
+<?php /*?><p class="special-price yoursaving">
+	<span class="label"><?php echo $this->__('You save') ?></span>
+	   <span class="price">
+				<?php echo Mage::helper('core')->currency($_savingPercent, true, false); ?>
+		</span>
+</p><?php */?>
+<div class="product"> 
+		   <div class="js-product-link product--price product--price--over-hang">
+            <div class="price--container">
+              <div class="price--grey-holder">
+                <div class="price--rrp">RRP&nbsp;<span class="price--strike"><?php echo Mage::helper('core')->currency($_price, true, false);?></span></div>
+              </div>
+              <div class="price--sell-price">
+                <div class="price--inner">
+                  <div class="price--inner-inner"><span class="price--currency-sign"><?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();?></span><?php echo str_replace('$','',Mage::helper('core')->currency($_finalPrice, true, false));?></div>
+                </div>
+                <div class="price--savings">Save<span class="price--savings-value"><?php echo Mage::helper('core')->currency($_savingPercent, true, false); ?></span></div>
+              </div>
+            </div>
+            </div>
+		  </div>
+<?php endif; 
+}else{
+$request = $this->getRequest();
+$module = $request->getModuleName();
+$controller = $request->getControllerName();
+$action = $request->getActionName();
+ 
+    $cart = Mage::getModel('checkout/cart')->getQuote();
+	foreach ($cart->getAllVisibleItems() as $item) 
+	{ 
+	  $product = Mage::getModel('catalog/product')->load($item->getProductId());
+	  $_finalPrice=$product->getFinalPrice(); 
+	  $_price=$product->getPrice();
+	  if($_finalPrice < $_price){
+	    $_savingPercent += round($_price - $_finalPrice);
+	  }
+	}	
+	if($module == 'checkout' && $controller == 'cart' && $action == 'index')
+    {?>
+	   <tr style="border-top:1px solid #dcdcdc;">
+		<td style="" class="a-right" colspan="1">
+			<strong style="color:red; font-weight:600;"><?php echo $this->__("Congratulations") ?><p class="youhaveasved"><?php echo $this->__("You've Saved") ?></p></strong>
+		</td>
+		<td style="" class="a-right">
+			<strong><span class="price"  style="color:red;"><?php echo Mage::helper('core')->currency($_savingPercent, true, false); ?></span></strong>
+		</td>
+	   </tr>
+   <?php }
+   if($module == 'firecheckout' && $controller == 'index' && $action == 'index'){?>
+   <?php /*?><tr style="border-top:1px solid #dcdcdc;">
+		<td style="" class="a-right" colspan="3">
+			<strong style="color:#05b59d; font-weight:600;"><?php echo $this->__("Congratulations You've Saved") ?></strong>
+		</td>
+		<td style="" class="a-right">
+			<strong><span class="price"  style="color:#05b59d;"><?php echo Mage::helper('core')->currency($_savingPercent, true, false); ?></span></strong>
+		</td>
+	   </tr> <?php */?>  
+	<p class="special-price yoursaving firecheckout">
+	<span class="label"><?php echo $this->__("Congratulations You've Saved ") ?></span>
+	   <span class="price"><?php echo Mage::helper('core')->currency($_savingPercent, true, false); ?></span>
+	</p>   
+<?php } 
+} ?>

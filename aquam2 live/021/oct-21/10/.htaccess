@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "ulamart"
+AuthUserFile https://www.ulamart.com/.htpasswd
+AuthUser valid-user

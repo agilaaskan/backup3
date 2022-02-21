@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <remove src="mage/calendar.css" />
+        <remove src="css/styles-m.css" />
+        <remove src="css/styles-l.css" />
+        <remove src="css/print.css" />  
+        <remove src="fonts/opensans/regular/opensans-400.woff2" />
+        <remove src="fonts/opensans/semibold/opensans-600.woff2" />
+        <remove src="fonts/opensans/bold/opensans-700.woff2" />
+        <remove src="fonts/opensans/light/opensans-300.woff2"/>
+        <remove src="fonts/opensans/regular/opensans-400.woff2" />
+        <remove src="fonts/Luma-Icons.woff2" />
+        <remove src="Amasty_ShopbyBase::css/swiper.min.css" />
+        <remove src="Ves_All::lib/owl.carousel/assets/owl.carousel.css" />
+        <remove src="Ves_All::lib/bootstrap/css/bootstrap-tiny.css" />
+        <remove src="Ves_Megamenu::css/font-awesome.min.css" />
+        <remove src="Ves_Megamenu::css/animate.min.css" />
+        <remove src="Ves_Megamenu::css/styles.css" />
+        <remove src="Amasty_ShopbyBase::css/source/mkcss/am-shopby-base.min.css" />
+        <remove src="Amasty_Shopby::css/source/mkcss/am-shopby.min.css" />
+
+        <remove src="Amasty_Shopby::js/amShopbyResponsive.js" />
+        <remove src="Amasty_Shopby::js/amShopbyTopFilters.js" />
+        <remove src="Ves_Megamenu::js/megamenuGeneral.js" />
+        <remove src="RH_OwlSlider::js/owl.carousel.js" />
+        <remove src="Magento_Captcha::js/view/checkout/loginCaptcha.js" />
+        <css src="css/home.css"/>
+
+    <!-- <link rel="preload" href="https://magento2.tiptopshop.com.au/pub/static/frontend/Magento/luma_child_theme/en_US/js/splide.min.js" as="script">
+    <link rel="preload" href="https://magento2.tiptopshop.com.au/pub/static/frontend/Magento/luma_child_theme/en_US/css/splide.min.css" as="style">  -->
+
+    </head>
+    <body/>
+</page>
+

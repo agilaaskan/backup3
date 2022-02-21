@@ -1,0 +1,52 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @var $block \Magento\Catalog\Block\Product\ProductList\Toolbar
+ */
+?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+$baseUrl = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
+?>
+<div class="toolbar-sorter sorter">
+    <label class="sorter-label" for="sorter"><?= $block->escapeHtml(__('Sort By:')) ?></label>
+    <select id="sorter" data-role="sorter" class="sorter-options">
+        <?php foreach ($block->getAvailableOrders() as $_key => $_order) :?>
+            <option value="<?= $block->escapeHtmlAttr($_key) ?>"
+                <?php if ($block->isOrderCurrent($_key)) :?>
+                    selected="selected"
+                <?php endif; ?>
+                >
+                <?= $block->escapeHtml(__($_order)) ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+    <?php if ($block->getCurrentDirection() == 'desc') :?>
+        <a title="<?= $block->escapeHtmlAttr(__('Set Ascending Direction')) ?>"
+           href="#"
+           class="action sorter-action sort-desc"
+           data-role="direction-switcher"
+           data-value="asc">
+            <span><?= $block->escapeHtml(__('Set Ascending Direction')) ?></span>
+        </a>
+    <?php else :?>
+        <a title="<?= $block->escapeHtmlAttr(__('Set Descending Direction')) ?>"
+           href="#"
+           class="action sorter-action sort-asc"
+           data-role="direction-switcher"
+           data-value="desc">
+           <img class="rc-tt" src="<?php echo $baseUrl;?>pub/media/smartwave/portowatchau/images/i_asc_arrow.gif">
+            <span><?= $block->escapeHtml(__('Set Descending Direction')) ?>
+            
+            </span>
+        </a>
+    <?php endif; ?>
+</div>

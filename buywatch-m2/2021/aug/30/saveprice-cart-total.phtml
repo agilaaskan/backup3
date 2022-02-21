@@ -1,0 +1,28 @@
+<?php 
+$request = $this->getRequest();
+$module = $request->getModuleName();
+$controller = $request->getControllerName();
+$action = $request->getActionName();
+ 
+    $cart = Mage::getModel('checkout/cart')->getQuote();
+	foreach ($cart->getAllVisibleItems() as $item) 
+	{ 
+	  $product = Mage::getModel('catalog/product')->load($item->getProductId());
+	  $_finalPrice=$product->getFinalPrice(); 
+	  $_price=$product->getPrice();
+	  if($_finalPrice < $_price){
+	    $_savingPercent += round($_price - $_finalPrice);
+	  }
+	}	
+	if($module == 'checkout' && $controller == 'cart' && $action == 'index')
+    {?>
+	   <tr style="border-top:1px solid #dcdcdc;">
+		<td style="" class="a-right" colspan="1">
+			<strong style="color:red; font-weight:600;"><?php echo $this->__("Congratulations") ?><p class="youhaveasved"><?php echo $this->__("You've Saved") ?></p></strong>
+		</td>
+		<td style="" class="a-right">
+			<strong><span class="price"  style="color:red;"><?php echo Mage::helper('core')->currency($_savingPercent, true, false); ?></span></strong>
+		</td>
+	   </tr>
+   <?php }    
+?>

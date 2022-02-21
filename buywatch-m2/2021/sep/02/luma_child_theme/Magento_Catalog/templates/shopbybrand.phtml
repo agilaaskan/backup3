@@ -1,0 +1,40 @@
+<?php 
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');
+$categories = $product->getCategoryIds(); /*will return category ids array*/
+?>
+    <div id="brand-wacth">
+        <div id="list-social">
+
+        <a href="https://www.facebook.com/buywatchesonline.com.au/" target="_blank">
+            <img src="https://magento2.buywatchesonline.com.au/pub/static/frontend/Magento/luma_child_theme/web/images/casio/social1.png"  height="35" width="33" class=""></img>
+        </a>
+        <a href="http://instagram.com/buywatchesonline.com.au" target="_blank">
+            <img src="https://magento2.buywatchesonline.com.au/pub/static/frontend/Magento/luma_child_theme/web/images/casio/social2.png"  height="35" width="33" class=""></img>
+        </a>
+        <a href="https://www.youtube.com/channel/UCsZjmaQxS-BYmiUBhuhoG5g" target="_blank">
+            <img src="https://magento2.buywatchesonline.com.au/pub/static/frontend/Magento/luma_child_theme/web/images/casio/social3.png"  height="25" width="35" class=""></img>
+        </a>
+    </div>
+<?php
+foreach($categories as $category){
+    $cat = $objectManager->create('Magento\Catalog\Model\Category')->load($category);
+    $cat_ids = $cat->getId();
+    $g_shock_catid = 1685;
+    $baby_catid = 1686;?>
+
+
+    <?php if ($baby_catid == $cat_ids) {//Baby G  ?>
+        <p class="more-casio" id="baby-desktop"><a href="/baby-g.html" title="More Casio Baby-G Watches">More Casio Baby-G Watches</a></p>
+            <a class="baby-g" href="/baby-g.html" title="More Casio Baby-G Watches">
+            <img noloading height="168" width="168" src="https://magento2.buywatchesonline.com.au/pub/static/frontend/Magento/luma_child_theme/web/images/casio/babyg.jpg" alt="More Casio Baby-G Watches"></img></a>
+            <p class="more-casio" id="baby-mobile"><a href="/baby-g.html" title="More Casio Baby-G Watches">More Casio Baby-G Watches</a></p>
+    <?php } if ($g_shock_catid == $cat_ids) {//G Shock ?>
+        <p class="more-casio" id="g-shock-desktop"><a href="/g-shock.html" title="More Casio G Shock Watches">More Casio G Shock Watches</a></p>
+            <a class="g-shock"  href="/g-shock.html" title="More Casio G Shock Watches"><img noloading height="168" width="168" src="https://magento2.buywatchesonline.com.au/pub/static/frontend/Magento/luma_child_theme/web/images/casio/gshock.jpg" alt="More Casio G Shock Watches"></img></a>
+            <p class="more-casio" id="g-shock-mobile"><a href="/g-shock.html" title="More Casio G Shock Watches">More Casio G Shock Watches</a></p>
+
+    <?php }}
+
+?>
+   </div>

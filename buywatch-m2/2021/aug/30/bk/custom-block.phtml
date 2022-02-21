@@ -1,0 +1,33 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+$baseUrl = $storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_WEB);
+?>
+
+<div class="check-banner">
+<div class="payment-banner">
+        <a href="<?php echo $baseUrl;?>firecheckout/">
+                <img src="<?php echo $baseUrl;?>pub/media/smartwave/portowatchau/images/zip-paycon-strip-sml.png">
+        </a>
+                      <a href="https://www.buywatchesonline.com.au/firecheckout/" style="margin-left:4px;">                          
+                        <span id="siteseal"><script async="" type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=EXrvIIOWYU5jYE0If2AtcVoVE18LdpKZOIBFk6PLLqFjfZCKmcPiVh98zJxQ"></script></span>
+                      </a>
+                      <a href="<?php echo $baseUrl;?>firecheckout/">  
+                        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async=""></script>
+                      </a>
+</div>
+<div class="pay-left">
+<div class="stipe-banner"><a href="https://www.buywatchesonline.com.au/firecheckout/"><img src="<?php echo $baseUrl;?>pub/media/smartwave/portowatchau/images/strippowered.png"></a></div>
+<ul class="checkout-types">
+     <li class="checkout-cart-button">
+        <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout" onclick="window.location='https://www.buywatchesonline.com.au/firecheckout';">
+            <span>
+                <span>
+                    <img class="lock-checkout" src="<?php echo $baseUrl;?>pub/media/smartwave/portowatchau/images/lock.png">Pay Securely Now
+                    </span>
+                </span>
+        </button>
+    </li>
+</ul>
+</div>
+</div>

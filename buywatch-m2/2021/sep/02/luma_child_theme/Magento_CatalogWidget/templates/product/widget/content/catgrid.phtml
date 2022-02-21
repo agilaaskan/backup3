@@ -1,0 +1,293 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+use Magento\Framework\App\Action\Action;
+
+/** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
+?>
+
+
+   <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())) : ?>
+   
+   <?php
+    $_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
+    $type = 'widget-product-grid';
+
+    $mode = 'grid';
+
+    $image = 'new_products_content_widget_grid';
+    $items = $block->getProductCollection()->getItems();
+
+    $showWishlist = true;
+    $showCompare = true;
+    $showCart = true;
+    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    $description = false;
+    
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $reviewFactory = $objectManager->create('Magento\Review\Model\Review');
+    ?>
+    <div class="block widget block-products-list <?= /* @noEscape */ $mode ?>">
+        <?php if ($block->getTitle()) : ?>
+            <div class="block-title">
+                <strong><?= $block->escapeHtml(__($block->getTitle())) ?></strong>
+            </div>
+        <?php endif ?>
+        <div class="block-content">
+            <?= /* @noEscape */ '<!-- ' . $image . '-->' ?>
+            <div id="image-slider_cat" class="splide">
+                <div class="splide__track products-<?= /* @noEscape */ $mode ?> <?= /* @noEscape */ $mode ?>">
+                <ol class="splide__list product-items <?= /* @noEscape */ $type ?>">
+                    <?php $iterator = 0; ?>
+                    <?php foreach ($items as $_item) : ?>
+                        <?php if(($iterator % 3) == 0){?>
+                        <li class="item product-item splide__slide">
+                        <?php } ?>
+                        <?php $iterator ++; ?>
+                        <div class="product-item-info">
+                            <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo">
+                                <?= $block->getImage($_item, $image)->toHtml() ?>
+                            </a>
+                            <div class="product-item-details">
+                                <strong class="product-item-name">
+                                    <a title="<?= $block->escapeHtml($_item->getName()) ?>"
+                                       href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                       class="product-item-link">
+                                        <?= $block->escapeHtml($_item->getName()) ?>
+                                    </a>
+                                </strong>
+                                <?php if ($templateType) : ?>
+                                    <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>
+                                <?php endif; ?>
+                                <?php
+                                $productId = $_item->getId();
+                                $product = $objectManager->create('Magento\Catalog\Model\Product')->load($productId);
+                                $storeManager = $objectManager->create('\Magento\Store\Model\StoreManagerInterface');
+                                $storeId = $storeManager->getStore()->getStoreId();
+                                $reviewFactory->getEntitySummary($product, $storeId);
+
+                                $ratingSummary = $product->getRatingSummary()->getRatingSummary();
+                                $reviewCount = $product->getRatingSummary()->getReviewsCount();
+                                ?>
+                                    
+
+
+                                <?= $block->getProductPriceHtml($_item, $type) ?>
+
+                                <?= $block->getProductDetailsHtml($_item) ?>
+
+                                <?php if ($showWishlist || $showCompare || $showCart) : ?>
+                                    
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <?php if(($iterator % 3) == 0 || $iterator == count($items)){ ?>
+                        </li>
+                        <?php } ?>
+                    <?php endforeach ?>
+                </ol>
+                
+                </div>
+                <div class="splide__progress">
+                    <div class="splide__progress__bar">
+                    </div>
+                </div>
+            </div>
+            <?= $block->getPagerHtml() ?>
+        </div>
+    </div>
+ <script>
+document.addEventListener( 'DOMContentLoaded', function () {
+	new Splide( '#image-slider_cat', {
+	type: 'loop',
+    perMove: 1,
+    perPage: 1,
+    autoplay: false,
+    lazyLoad: 'nearby',
+}).mount();
+});
+
+var splide = new Splide( '#image-slider_cat' );
+
+splide.on( 'autoplay:playing', function ( rate ) {
+	console.log( rate ); // 0-1
+} );
+
+splide.mount();
+</script>
+<style>
+    @media (min-width: 768px){
+   /* div#image-slider_cat img.product-image-photo.cc {
+        max-height: 222px;
+        object-fit: contain;
+    } */
+}
+/* div#image-slider_cat ol.splide__list li.splide__slide {
+    position :unset !important;
+    display: block;
+    width: 100% !important;
+}
+div#image-slider_cat ol.splide__list {
+    transform: unset !important;
+    width: 100% !important;
+    display: block;
+} */
+/* @media (min-width: 1440px){
+    div#image-slider_cat .product-items .product-item-info .product-item-photo {
+    float: none;
+    left: 0;
+    margin: 0;
+    position: unset !important;
+    top: 0;
+}
+} */
+
+div#image-slider_cat .product-items .price-box{
+    margin:0px !important;
+}
+div#image-slider_cat .product-items .product-item-info .product-item-photo{
+    position : unset !important;
+}
+div#image-slider_cat .product-item-inner {
+    display: none !important;
+}
+div#image-slider_cat span.old-price span.price{
+    font-size:12px !important;
+}
+div#image-slider_cat  span.special-price .price{
+    font-size:15px !important;
+}
+div#image-slider_cat .product-item-info, div#image-slider_cat .product-item-info:hover{
+    padding: 10px 0 6px !important;
+}
+div#image-slider_cat a.product-item-link{
+    text-align:left !important;
+}
+div#image-slider_cat .product-item-details{
+    text-align:left !important;
+}
+div#image-slider_cat .product-reviews-summary{
+    background:none !important;
+    margin:0px !important;
+}
+div#image-slider_cat .price-box.price-final_price span.old-price,div#image-slider_cat .price-box.price-final_price span.old-price{
+    padding: 3px 0px !important;
+}
+div#image-slider_cat .product-item-details {
+    padding-top: 0px !important;
+    padding-bottom: 7px !important;
+    padding: 10px 0px 0px 15px;
+    text-align: left !important;
+}
+div#image-slider_cat span.old-price span.price{
+    padding: 3px 3px 0px 0px !important;
+}
+div#image-slider_cat a.product-item-link {
+    line-height: 1.35;
+    font-size: 12px !important;
+    text-decoration: none !important;
+}
+div#image-slider_cat .price-box.price-final_price{
+    justify-content:left !important; 
+}
+div#image-slider_cat {
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    background: url(https://magento2.tiptopshop.com.au/pub/static/frontend/Magento/tiptopshop_luma_child/en_US/images/bkg_4.png) bottom no-repeat;
+}
+div#cat_feature .block-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #313131;
+    line-height: 1;
+}
+button.splide__arrow.splide__arrow--prev:after,button.splide__arrow.splide__arrow--next:after{
+    font-size: 14px !important;
+    line-height:1;
+}
+a.product-item-link {
+    text-decoration: none !important;
+}
+/*category feature product*/
+@media (min-width: 768px){
+div#image-slider_cat .product-item-details {width: 67% !important;float: left;margin: 0px !important;}
+div#image-slider_cat a.product-item-photo { width: 33% !important;float: left !important;}
+#cat_feature strong.product-item-name{height:auto;}
+
+
+}
+
+#cat_feature .block-title {
+	display:inline-block;
+}
+#cat_feature .block-title strong {
+	font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #313131;
+    line-height: 1;margin-bottom: 10px;
+}
+#cat_feature strong.product-item-name{margin-bottom:3px;text-align:left;}
+#cat_feature .shipps-text-add,
+#cat_feature .payment-text-add,
+#cat_feature .price--savings {
+	display:none;
+}
+#cat_feature .price--rrp{color:#fff !important;}
+#cat_feature span.old-price span.price {
+color: #a7a7a7;
+    text-decoration: line-through;
+    font-size: 12px;
+    vertical-align: middle;
+    }
+#cat_feature span.special-price .price {
+    font-weight: 600;
+    color: #444;
+    font-size:15px;
+    }
+#cat_feature .price-box .price--inner-inner {
+	 min-width: auto; 
+     background: unset; 
+     color: #444; 
+     float: unset; 
+     height: unset; 
+     line-height: normal; 
+     font-weight: normal; 
+     text-align: center;
+}
+#cat_feature [data-price-type=finalPrice] {
+   min-width: auto; 
+     background: unset; 
+     color: #444; 
+     float: unset; 
+     height: unset; 
+     line-height: normal; 
+     font-weight: normal; 
+     text-align: center;
+}
+#cat_feature .price--sell-price>.price--inner:after {display:none;}
+#cat_feature .price--grey-holder {float:left;}
+#cat_feature .price--sell-price {float:right;}
+/*17-8-21*/
+#cat_feature .price--sell-price {float:unset;margin-left:-20px;}
+#cat_feature .price-box.price-final_price span.old-price {margin-left:-27px;}
+#cat_feature .block-title {max-width: 85px;height: 18px;overflow: hidden;}
+#cat_feature,
+#cat_feature .product-reviews-summary,#cat_feature strong.product-item-name{text-align: left;}
+@media only screen and (max-width:767px) {
+    #cat_feature  li img.product-image-photo {width:95px !important;height:95px;}
+    #cat_feature  .product-item-details {width: 50% !important;float: left;margin: 0px !important;    padding: 7px 16px !important;}
+    #cat_feature  a.product-item-photo {width: 33% !important;float: left !important;}
+   #cat_feature strong.product-item-name {
+    height: 112px;}
+    #cat_feature span.special-price .price {display:block;padding:2px 0px;}
+    #cat_feature .widget.block-products-list.grid {margin-bottom:0px;}
+}
+@media only screen and (min-width:768px) {
+body.catalog-category-view .column.main .partner-banner {display:none;}
+}
+</style>
+<?php endif;?>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+	    <tab id="askantech" translate="label" sortOrder="100" class="askantech-logo">
+            <label><![CDATA[]]></label>
+        </tab>
+		<section id="Flatfee" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <class>separator-top</class>
+            <label>Flatrate Fee</label>
+            <tab>askantech</tab>
+            <resource>Askantech_Flatfee::config_flatfee</resource>
+			<group id="Flatfee" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configuration</label>
+                <field id="status" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flatrate Fee</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="name" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fee Name</label>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                <field id="Flatfee_amount" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flatrate Fee Amount</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+					 <comment><![CDATA[Applies as Fixed Amount]]></comment>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                <!-- new -->
+                <field id="Flatfee_category1" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flatrate Category 1</label>
+                    <source_model>Askantech\Flatfee\Model\Source\Categories</source_model>
+                    <validate>required-entry</validate>
+                    <comment>Please enter only one category Id to apply flatfee</comment>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                <field id="Flatfee_amount2" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flatrate Fee Amount 2</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+					 <comment><![CDATA[Applies as Fixed Amount]]></comment>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                <field id="Flatfee_category2" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flatrate Category 2</label>
+                    <source_model>Askantech\Flatfee\Model\Source\Categories</source_model>
+                    <validate>required-entry</validate>
+                    <comment>Please enter only one category Id to apply flatfee</comment>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                  <field id="Flatfee_amount3" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flatrate Fee Amount 3</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+					 <comment><![CDATA[Applies as Fixed Amount]]></comment>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                <field id="Flatfee_category3" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Flatrate Category 3</label>
+                    <source_model>Askantech\Flatfee\Model\Source\Categories</source_model>
+                    <validate>required-entry</validate>
+                    <comment>Please enter only one category Id to apply flatfee</comment>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                
+                <!-- new -->
+                <field id="minimum_order_amount" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Minimum Order Amount To Display Extra Fee</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <depends>
+                        <field id="Flatfee/Flatfee/status">1</field>
+                    </depends>
+                </field>
+                <field id="customer_group" translate="label comment" type="multiselect" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Apply for Customer Groups</label>
+                    <source_model>Magento\Customer\Model\ResourceModel\Group\Collection</source_model>
+                    <comment>It apply only for specifing customer groups.</comment>
+                </field>
+            </group>
+		</section>
+	</system>
+</config>
